@@ -68,7 +68,7 @@ export default function ConsultationSection() {
                   <Mail className="w-4 h-4" />
                 </div>
                 <div>
-                  <div className="text-[10px] text-neutral-400 font-mono">공식 이메일</div>
+                  <div className="text-[10px] text-neutral-400 font-mono">대표 이메일</div>
                   <div className="text-sm font-mono text-neutral-900">{STUDIO_INFO.email}</div>
                 </div>
               </a>

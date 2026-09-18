@@ -77,28 +77,37 @@ export default function AboutSection() {
                     <p className="text-xs text-neutral-300 mt-1 font-light">
                       {principal.education} · {principal.license}
                     </p>
-                    <p className="text-[9px] text-amber-200/80 font-mono mt-1">
-                      {principal.photoNotice}
-                    </p>
                   </div>
                 </div>
 
                 {/* Body: Career & Affiliations */}
                 <div className="p-6 sm:p-8 space-y-6 grow flex flex-col justify-between">
-                  {/* Major Career History */}
+                  {/* Chronological Career History */}
                   <div>
-                    <h5 className="text-xs font-bold tracking-widest text-neutral-400 uppercase mb-3 flex items-center gap-1.5">
+                    <h5 className="text-xs font-bold tracking-widest text-neutral-400 uppercase mb-4 flex items-center gap-1.5">
                       <Award className="w-3.5 h-3.5 text-amber-800" />
-                      <span>주요 경력 및 대표 실적</span>
+                      <span>주요 경력 및 실적 (연도순)</span>
                     </h5>
-                    <ul className="space-y-1.5 text-xs text-neutral-700 font-light leading-relaxed">
-                      {principal.careerHighlights.map((career, cIdx) => (
-                        <li key={cIdx} className="flex items-start gap-2">
-                          <span className="text-amber-800 font-bold shrink-0">•</span>
-                          <span>{career}</span>
-                        </li>
+                    <div className="space-y-3">
+                      {principal.careerHistory.map((career, cIdx) => (
+                        <div
+                          key={cIdx}
+                          className="flex flex-col sm:flex-row sm:items-baseline gap-1 sm:gap-4 text-xs border-b border-neutral-100 pb-2.5 last:border-0 last:pb-0"
+                        >
+                          <span className="font-mono text-amber-900/90 font-medium shrink-0 sm:w-28 text-[11px]">
+                            {career.period}
+                          </span>
+                          <div className="grow">
+                            <span className="font-medium text-neutral-800">{career.role}</span>
+                            {career.details && (
+                              <p className="text-[11px] text-neutral-500 font-light mt-0.5 leading-relaxed">
+                                {career.details}
+                              </p>
+                            )}
+                          </div>
+                        </div>
                       ))}
-                    </ul>
+                    </div>
                   </div>
 
                   {/* Public Appointments / Affiliations */}

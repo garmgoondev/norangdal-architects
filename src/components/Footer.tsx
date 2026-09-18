@@ -110,7 +110,7 @@ export default function Footer() {
           <div>
             <p>© {new Date().getFullYear()} NORANGDAL ARCHITECTS. All rights reserved.</p>
             <p className="text-[10px] text-neutral-600 font-mono mt-1">
-              ※ 본 웹사이트는 노랑달건축사사무소의 공식 9대 프로젝트 및 브랜드 철학을 바탕으로 제작된 고성능 디지털 쇼룸 제안용 프로토타입입니다.
+              ※ 본 웹사이트는 노랑달건축사사무소의 프로젝트 및 브랜드 철학을 바탕으로 제작된 디지털 쇼룸 제안용 시안 데모입니다.
             </p>
           </div>
           <p className="font-mono text-[10px] text-neutral-500">

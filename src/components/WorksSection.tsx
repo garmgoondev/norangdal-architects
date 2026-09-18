@@ -41,10 +41,10 @@ export default function WorksSection({ onSelectProject }: WorksSectionProps) {
           <div className="mt-3 md:mt-0 max-w-md">
             <p className="text-xs sm:text-sm text-neutral-500 font-light">
               복합커뮤니티센터, 공공도서관, 코워킹스페이스부터 민속예술관과 환경개선까지
-              사용자의 이야기를 바탕으로 구현된 노랑달건축사사무소의 9대 공식 설계 프로젝트입니다.
+              사용자의 이야기를 바탕으로 구현된 노랑달건축사사무소의 주요 설계 프로젝트 아카이브입니다.
             </p>
-            <p className="text-[10px] font-mono text-amber-900/80 mt-1 font-medium">
-              ※ 노랑달건축사사무소 공식 홈페이지(norangdal.co.kr)에 등록된 실제 프로젝트 조감도 및 제원 데이터를 100% 반영하였습니다.
+            <p className="text-[10px] font-mono text-neutral-400 mt-1 font-light">
+              ※ 현재 등록된 조감도는 시안용 이미지이며, 추후 고화질 원본 이미지 및 추가 도면 데이터로 업데이트가 가능합니다.
             </p>
           </div>
         </div>
@@ -93,10 +93,12 @@ export default function WorksSection({ onSelectProject }: WorksSectionProps) {
                   </div>
                 )}
 
-                {/* Official Tag */}
-                <div className="absolute bottom-2 left-2 px-2 py-0.5 bg-neutral-950/80 backdrop-blur-xs text-white/90 text-[9px] font-mono tracking-wider rounded-xs pointer-events-none border border-white/10">
-                  공식 프로젝트 실적
-                </div>
+                {/* Concept/Virtual Image Badge (only when isMockupImage is true) */}
+                {project.isMockupImage && (
+                  <div className="absolute bottom-2 left-2 px-2 py-0.5 bg-neutral-950/75 backdrop-blur-xs text-white/80 text-[9px] font-mono tracking-wider rounded-xs pointer-events-none border border-white/10">
+                    가상 이미지
+                  </div>
+                )}
 
                 {/* Quick Action Overlay Icon */}
                 <div className="absolute bottom-3 right-3 w-8 h-8 rounded-full bg-white/90 text-neutral-900 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300 shadow-sm">

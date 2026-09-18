@@ -85,16 +85,11 @@ export default function Hero({ onSelectProject }: HeroProps) {
       <div className="absolute bottom-6 sm:bottom-8 right-6 sm:right-10 z-20 pointer-events-auto">
         <button
           onClick={() => onSelectProject(activeProject)}
-          className="group text-right cursor-pointer flex flex-col items-end"
+          className="group text-right cursor-pointer flex items-center gap-1.5 text-xs sm:text-sm font-sans font-light tracking-wide text-white/95 drop-shadow-md hover:text-amber-300 transition-colors"
         >
-          <div className="text-xs sm:text-sm font-sans font-light tracking-wide text-white/95 drop-shadow-md group-hover:text-amber-300 transition-colors flex items-center gap-1.5">
-            <span>{activeProject.titleKo}, {activeProject.year}</span>
-            <span className="text-[10px] opacity-0 group-hover:opacity-100 group-hover:translate-x-0.5 transition-all">
-              →
-            </span>
-          </div>
-          <span className="text-[10px] text-amber-300/80 font-mono tracking-wider mt-0.5">
-            공식 프로젝트 실데이터
+          <span>{activeProject.titleKo}, {activeProject.year}</span>
+          <span className="text-[10px] opacity-0 group-hover:opacity-100 group-hover:translate-x-0.5 transition-all">
+            →
           </span>
         </button>
       </div>
