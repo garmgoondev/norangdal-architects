@@ -36,19 +36,17 @@ export default function Navbar({ onOpenConsultation }: NavbarProps) {
       }`}
     >
       <div className="max-w-7xl mx-auto px-6 sm:px-8 flex items-center justify-between">
-        {/* Logo with Yellow Moon Emblem */}
+        {/* Logo with Authentic Norangdal Double-Moon Emblem */}
         <a href="#" className="group flex items-center gap-3">
-          <div className="relative w-9 h-9 rounded-full bg-neutral-950 p-1 flex items-center justify-center shadow-xs border border-neutral-800/30 group-hover:scale-105 transition-transform duration-300 shrink-0">
-            <svg viewBox="0 0 36 36" className="w-full h-full" fill="none">
+          <div className="relative w-8 h-8 flex items-center justify-center group-hover:scale-105 transition-transform duration-300 shrink-0">
+            <svg viewBox="0 0 100 100" className="w-full h-full" fill="none">
               <defs>
-                <linearGradient id="navMoonGrad" x1="0%" y1="0%" x2="100%" y2="100%">
-                  <stop offset="0%" stopColor="#FEE180" />
-                  <stop offset="60%" stopColor="#FDD35D" />
-                  <stop offset="100%" stopColor="#E89B17" />
-                </linearGradient>
+                <filter id="navMoonCrease" x="-10%" y="-10%" width="130%" height="130%">
+                  <feDropShadow dx="-0.8" dy="0.8" stdDeviation="0.6" floodColor="#8C6326" floodOpacity="0.35" />
+                </filter>
               </defs>
-              <circle cx="18" cy="18" r="13" fill="url(#navMoonGrad)" />
-              <path d="M 18 5 A 13 13 0 0 0 18 31 A 13 13 0 0 1 18 5 Z" fill="#FFF9DF" opacity="0.4" />
+              <circle cx="43" cy="53" r="33" fill="#CE9F55" />
+              <circle cx="55" cy="43" r="33" fill="#D9AC64" filter="url(#navMoonCrease)" stroke="#B3843B" strokeWidth="0.75" />
             </svg>
           </div>
 

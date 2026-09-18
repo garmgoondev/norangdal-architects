@@ -10,10 +10,10 @@ export default function Footer() {
           {/* Col 1: Brand & Statement (6 cols) */}
           <div className="md:col-span-6 space-y-3">
             <div className="flex items-center gap-3">
-              <div className="w-8 h-8 rounded-full bg-neutral-900 p-0.5 flex items-center justify-center border border-neutral-800 shrink-0">
-                <svg viewBox="0 0 36 36" className="w-full h-full" fill="none">
-                  <circle cx="18" cy="18" r="13" fill="#FDD35D" />
-                  <path d="M 18 5 A 13 13 0 0 0 18 31 A 13 13 0 0 1 18 5 Z" fill="#FFF9DF" opacity="0.45" />
+              <div className="w-8 h-8 flex items-center justify-center shrink-0">
+                <svg viewBox="0 0 100 100" className="w-full h-full" fill="none">
+                  <circle cx="43" cy="53" r="33" fill="#CE9F55" />
+                  <circle cx="55" cy="43" r="33" fill="#D9AC64" stroke="#B3843B" strokeWidth="0.75" />
                 </svg>
               </div>
               <div>
