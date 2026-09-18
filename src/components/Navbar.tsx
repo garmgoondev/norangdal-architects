@@ -36,14 +36,30 @@ export default function Navbar({ onOpenConsultation }: NavbarProps) {
       }`}
     >
       <div className="max-w-7xl mx-auto px-6 sm:px-8 flex items-center justify-between">
-        {/* Logo */}
-        <a href="#" className="group flex flex-col">
-          <span className="font-serif tracking-widest text-lg sm:text-xl font-bold text-neutral-900 group-hover:text-amber-700 transition-colors">
-            {STUDIO_INFO.nameKo}
-          </span>
-          <span className="text-[10px] tracking-[0.25em] text-neutral-500 font-sans uppercase">
-            {STUDIO_INFO.nameEn}
-          </span>
+        {/* Logo with Yellow Moon Emblem */}
+        <a href="#" className="group flex items-center gap-3">
+          <div className="relative w-9 h-9 rounded-full bg-neutral-950 p-1 flex items-center justify-center shadow-xs border border-neutral-800/30 group-hover:scale-105 transition-transform duration-300 shrink-0">
+            <svg viewBox="0 0 36 36" className="w-full h-full" fill="none">
+              <defs>
+                <linearGradient id="navMoonGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+                  <stop offset="0%" stopColor="#FEE180" />
+                  <stop offset="60%" stopColor="#FDD35D" />
+                  <stop offset="100%" stopColor="#E89B17" />
+                </linearGradient>
+              </defs>
+              <circle cx="18" cy="18" r="13" fill="url(#navMoonGrad)" />
+              <path d="M 18 5 A 13 13 0 0 0 18 31 A 13 13 0 0 1 18 5 Z" fill="#FFF9DF" opacity="0.4" />
+            </svg>
+          </div>
+
+          <div className="flex flex-col">
+            <span className="font-serif tracking-widest text-lg sm:text-xl font-bold text-neutral-900 group-hover:text-amber-800 transition-colors leading-tight">
+              {STUDIO_INFO.nameKo}
+            </span>
+            <span className="text-[10px] tracking-[0.25em] text-neutral-500 font-sans uppercase">
+              {STUDIO_INFO.nameEn}
+            </span>
+          </div>
         </a>
 
         {/* Desktop Nav */}

@@ -4,23 +4,32 @@ import "./globals.css";
 export const metadata: Metadata = {
   title: "노랑달 건축사사무소 | NORANGDAL ARCHITECTS",
   description:
-    "서울 송파구 건축사사무소. 양주시 장애인 직업재활시설 설계공모 당선작, 단독주택, 상가주택, 근린생활시설, 대수선 리모델링 설계 전문 아틀리에. 대표 건축사 양인애 직통 상담.",
+    "서울 송파구 건축사사무소. 양주시 남면 실내체육시설·엄사면 공영주차타워 설계공모 입상, 단독주택, 상가주택, 근린생활시설, 대수선 리모델링 설계 전문 아틀리에. 대표 건축사 이슬기.",
   keywords: [
     "노랑달건축사사무소",
+    "이슬기건축사",
     "건축사사무소",
     "송파구건축사",
     "잠실건축사",
-    "가락동건축사",
+    "방이동건축사",
     "상가주택설계",
     "단독주택설계",
-    "양주시직업재활시설공모",
-    "양인애건축사",
+    "양주시남면체육시설",
+    "엄사면공영주차타워",
   ],
-  authors: [{ name: "노랑달 건축사사무소" }],
+  authors: [{ name: "노랑달 건축사사무소 (대표 이슬기)" }],
+  icons: {
+    icon: [
+      { url: "/icon.svg", type: "image/svg+xml" },
+      { url: "/favicon.ico", sizes: "any" },
+    ],
+    shortcut: "/favicon.ico",
+    apple: "/icon.svg",
+  },
   openGraph: {
     title: "노랑달 건축사사무소 | NORANGDAL ARCHITECTS",
     description:
-      "도시의 결을 읽고, 빛과 온기를 채우는 건축. 서울 송파구 가락동 소재 건축사사무소.",
+      "도시의 결을 읽고, 빛과 온기를 채우는 건축. 서울 송파구 방이동 소재 건축사사무소.",
     url: "https://norangdal-architects.vercel.app",
     siteName: "노랑달 건축사사무소",
     images: [

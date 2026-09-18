@@ -9,12 +9,22 @@ export default function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-12 gap-8 pb-12 border-b border-neutral-800">
           {/* Col 1: Brand & Statement (6 cols) */}
           <div className="md:col-span-6 space-y-3">
-            <span className="font-serif text-lg text-white font-medium block">
-              {STUDIO_INFO.nameKo}
-            </span>
-            <span className="text-[11px] tracking-widest uppercase text-neutral-500 font-mono block">
-              {STUDIO_INFO.nameEn}
-            </span>
+            <div className="flex items-center gap-3">
+              <div className="w-8 h-8 rounded-full bg-neutral-900 p-0.5 flex items-center justify-center border border-neutral-800 shrink-0">
+                <svg viewBox="0 0 36 36" className="w-full h-full" fill="none">
+                  <circle cx="18" cy="18" r="13" fill="#FDD35D" />
+                  <path d="M 18 5 A 13 13 0 0 0 18 31 A 13 13 0 0 1 18 5 Z" fill="#FFF9DF" opacity="0.45" />
+                </svg>
+              </div>
+              <div>
+                <span className="font-serif text-lg text-white font-medium block leading-tight">
+                  {STUDIO_INFO.nameKo}
+                </span>
+                <span className="text-[10px] tracking-widest uppercase text-neutral-500 font-mono block">
+                  {STUDIO_INFO.nameEn}
+                </span>
+              </div>
+            </div>
             <p className="text-neutral-400 max-w-md leading-relaxed mt-2">
               {STUDIO_INFO.statement}
             </p>
