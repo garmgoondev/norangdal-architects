@@ -50,7 +50,7 @@ export const PROJECTS: Project[] = [
       "https://images.unsplash.com/photo-1600566753190-17f0baa2a6c3?q=80&w=1600&auto=format&fit=crop"
     ],
     isMockupImage: true,
-    imageNotice: "※ 본 이미지는 콘셉트 시안용 연출 이미지입니다. (실제 프로젝트 사진/도면 무상 교체 세팅 지원)",
+    imageNotice: "※ 시안용 연출 이미지 (실데이터 반영 가능)",
     drawings: [
       {
         title: "배치도 (Site Plan Concept)",
@@ -99,7 +99,7 @@ export const PROJECTS: Project[] = [
       "https://images.unsplash.com/photo-1577495508048-b635879837f1?q=80&w=1600&auto=format&fit=crop"
     ],
     isMockupImage: true,
-    imageNotice: "※ 본 이미지는 콘셉트 시안용 연출 이미지입니다. (실제 프로젝트 사진/도면 무상 교체 세팅 지원)",
+    imageNotice: "※ 시안용 연출 이미지 (실데이터 반영 가능)",
     drawings: [
       {
         title: "입면 파사드 분석도 (Facade Concept)",
@@ -143,7 +143,7 @@ export const PROJECTS: Project[] = [
       "https://images.unsplash.com/photo-1600607687920-4e2a09cf159d?q=80&w=1600&auto=format&fit=crop"
     ],
     isMockupImage: true,
-    imageNotice: "※ 본 이미지는 콘셉트 시안용 연출 이미지입니다. (실제 프로젝트 사진/도면 무상 교체 세팅 지원)",
+    imageNotice: "※ 시안용 연출 이미지 (실데이터 반영 가능)",
     drawings: [
       {
         title: "단면 다이어그램 (Section Concept)",
@@ -184,7 +184,7 @@ export const PROJECTS: Project[] = [
       "https://images.unsplash.com/photo-1600585152220-90363fe7e115?q=80&w=1600&auto=format&fit=crop"
     ],
     isMockupImage: true,
-    imageNotice: "※ 본 이미지는 콘셉트 시안용 연출 이미지입니다. (실제 프로젝트 사진/도면 무상 교체 세팅 지원)",
+    imageNotice: "※ 시안용 연출 이미지 (실데이터 반영 가능)",
     drawings: [
       {
         title: "배치 및 일조 분석도 (Sunlight Analysis)",
@@ -225,7 +225,7 @@ export const PROJECTS: Project[] = [
       "https://images.unsplash.com/photo-1497366811353-6870744d04b2?q=80&w=1600&auto=format&fit=crop"
     ],
     isMockupImage: true,
-    imageNotice: "※ 본 이미지는 콘셉트 시안용 연출 이미지입니다. (실제 프로젝트 사진/도면 무상 교체 세팅 지원)",
+    imageNotice: "※ 시안용 연출 이미지 (실데이터 반영 가능)",
     drawings: [
       {
         title: "구조보강 계획도 (Structural Plan)",

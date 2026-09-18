@@ -62,7 +62,7 @@ export default function ProcessSection({ onOpenConsultation }: ProcessSectionPro
               소유하신 대지의 법적 건폐율과 용적률이 궁금하신가요?
             </h4>
             <p className="text-xs text-neutral-400 font-light mt-1">
-              토지 지번(주소)을 남겨주시면 대표 건축사가 법적 조례와 최대 규모를 무상으로 사전 검토해 드립니다.
+              토지 지번(주소)을 남겨주시면 대표 건축사가 법적 조례와 건축 가능 규모를 사전 검토해 드립니다.
             </p>
           </div>
 
@@ -70,7 +70,7 @@ export default function ProcessSection({ onOpenConsultation }: ProcessSectionPro
             onClick={onOpenConsultation}
             className="px-6 py-3 bg-amber-500 hover:bg-amber-400 text-neutral-950 text-xs font-bold tracking-widest uppercase transition-colors shrink-0 flex items-center gap-2 cursor-pointer"
           >
-            <span>무상 대지 검토 요청하기</span>
+            <span>대지 사전 검토 신청하기</span>
             <ArrowRight className="w-3.5 h-3.5" />
           </button>
         </div>

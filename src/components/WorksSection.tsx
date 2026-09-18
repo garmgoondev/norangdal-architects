@@ -45,7 +45,7 @@ export default function WorksSection({ onSelectProject }: WorksSectionProps) {
               장소의 가치를 극대화하는 노랑달의 설계 아카이브입니다.
             </p>
             <p className="text-[10px] font-mono text-amber-900/70 mt-1">
-              ※ 포트폴리오 시안 안내: 현재 이미지는 쇼룸 시안용 연출 이미지이며, 대표님의 실제 준공 사진 및 도면으로 100% 무상 교체 세팅됩니다.
+              ※ 본 포트폴리오는 쇼룸 시안용 연출 이미지이며, 추후 실제 프로젝트 사진 및 도면으로 교체 반영됩니다.
             </p>
           </div>
         </div>
@@ -96,7 +96,7 @@ export default function WorksSection({ onSelectProject }: WorksSectionProps) {
 
                 {/* Conceptual Image Tag */}
                 <div className="absolute bottom-2 left-2 px-2 py-0.5 bg-neutral-950/70 backdrop-blur-xs text-white/80 text-[9px] font-mono tracking-wider rounded-xs pointer-events-none">
-                  시안 연출 이미지
+                  시안용 연출 이미지
                 </div>
 
                 {/* Quick Action Overlay Icon */}

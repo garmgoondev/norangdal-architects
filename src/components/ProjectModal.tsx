@@ -134,7 +134,7 @@ export default function ProjectModal({
 
                 <div className="absolute bottom-3 left-3 px-3 py-1 bg-neutral-950/80 backdrop-blur-xs text-white/90 text-[10px] font-sans rounded-xs flex items-center gap-1.5 border border-white/10">
                   <span className="w-1.5 h-1.5 rounded-full bg-amber-400" />
-                  <span>시안 연출 이미지 (실제 준공 사진으로 무상 교체 지원)</span>
+                  <span>시안용 연출 이미지 (실데이터 반영 가능)</span>
                 </div>
 
                 <div className="absolute bottom-3 right-3 px-3 py-1 bg-neutral-950/70 text-white text-[11px] font-mono rounded-xs">
@@ -178,7 +178,7 @@ export default function ProjectModal({
           {activeTab === "drawings" && (
             <div className="space-y-8">
               <div className="bg-amber-50/80 border-l-4 border-amber-600 p-4 text-xs text-amber-900">
-                <strong>도면 뷰어 시안 안내</strong>: 본 도면 다이어그램은 건축 웹사이트 전용 도면 뷰어 인터랙션 구현을 위한 표준 콘셉트 도면입니다. 노랑달의 실제 CAD/PDF 도면 전달 시 벡터화된 고해상도 도면으로 100% 무상 교체 반영됩니다.
+                <strong>도면 뷰어 시안 안내</strong>: 본 도면 다이어그램은 도면 뷰어 인터랙션 구현을 위한 표준 콘셉트 도면이며, 추후 실제 프로젝트 도면으로 반영됩니다.
               </div>
 
               {project.drawings.map((drawing, idx) => (

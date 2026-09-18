@@ -79,7 +79,7 @@ export default function Hero({ onSelectProject }: HeroProps) {
                   <span className="text-[10px]">→</span>
                 </span>
                 <span className="text-[10px] text-neutral-400 font-mono tracking-wide">
-                  ※ 시안 연출 이미지 (실데이터 무상 반영)
+                  ※ 시안용 연출 이미지 (실데이터 반영 가능)
                 </span>
               </div>
             </button>

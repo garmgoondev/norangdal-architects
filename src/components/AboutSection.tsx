@@ -39,7 +39,7 @@ export default function AboutSection() {
                 <h3 className="text-2xl font-serif font-normal">{STUDIO_INFO.founder}</h3>
                 <p className="text-xs text-neutral-300 font-light mt-1">{STUDIO_INFO.license}</p>
                 <p className="text-[10px] text-amber-200/80 font-mono mt-2 pt-2 border-t border-white/10">
-                  ※ 대표 건축사 프로필 시안 컷 (실제 프로필 사진 전달 시 즉시 무상 교체)
+                  ※ 대표 건축사 프로필 시안 컷 (추후 실제 프로필 사진 반영)
                 </p>
               </div>
             </div>
