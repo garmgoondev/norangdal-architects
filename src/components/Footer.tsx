@@ -80,9 +80,14 @@ export default function Footer() {
         </div>
 
         {/* Bottom Bar */}
-        <div className="pt-8 flex flex-col sm:flex-row items-center justify-between text-neutral-500 text-[11px] gap-4">
-          <p>© {new Date().getFullYear()} NORANGDAL ARCHITECTS. All rights reserved.</p>
-          <p className="font-mono text-[10px]">
+        <div className="pt-8 flex flex-col sm:flex-row items-center justify-between text-neutral-500 text-[11px] gap-4 border-t border-neutral-900 mt-4">
+          <div>
+            <p>© {new Date().getFullYear()} NORANGDAL ARCHITECTS. All rights reserved.</p>
+            <p className="text-[10px] text-neutral-600 font-mono mt-1">
+              ※ 본 웹사이트는 노랑달 건축사사무소를 위한 맞춤형 디지털 쇼룸 제안용 프로토타입 시안입니다.
+            </p>
+          </div>
+          <p className="font-mono text-[10px] text-neutral-500">
             Designed for Architectural Excellence & Fast Mobile Experience
           </p>
         </div>

@@ -132,6 +132,11 @@ export default function ProjectModal({
                   </>
                 )}
 
+                <div className="absolute bottom-3 left-3 px-3 py-1 bg-neutral-950/80 backdrop-blur-xs text-white/90 text-[10px] font-sans rounded-xs flex items-center gap-1.5 border border-white/10">
+                  <span className="w-1.5 h-1.5 rounded-full bg-amber-400" />
+                  <span>시안 연출 이미지 (실제 준공 사진으로 무상 교체 지원)</span>
+                </div>
+
                 <div className="absolute bottom-3 right-3 px-3 py-1 bg-neutral-950/70 text-white text-[11px] font-mono rounded-xs">
                   {currentPhotoIdx + 1} / {project.images.length}
                 </div>
@@ -173,7 +178,7 @@ export default function ProjectModal({
           {activeTab === "drawings" && (
             <div className="space-y-8">
               <div className="bg-amber-50/80 border-l-4 border-amber-600 p-4 text-xs text-amber-900">
-                <strong>건축가 지적 자산 안내</strong>: 본 도면은 노랑달 건축사사무소의 공식 실시설계 및 공모 출품 자료이며, 건축주의 프라이버시 및 저작권 보호를 위해 축척과 상세 치수가 보호 처리되어 있습니다.
+                <strong>도면 뷰어 시안 안내</strong>: 본 도면 다이어그램은 건축 웹사이트 전용 도면 뷰어 인터랙션 구현을 위한 표준 콘셉트 도면입니다. 노랑달의 실제 CAD/PDF 도면 전달 시 벡터화된 고해상도 도면으로 100% 무상 교체 반영됩니다.
               </div>
 
               {project.drawings.map((drawing, idx) => (
@@ -200,9 +205,10 @@ export default function ProjectModal({
                     />
                   </div>
 
-                  <p className="text-xs text-neutral-500 font-light italic">
-                    • {drawing.caption}
-                  </p>
+                  <div className="flex items-center justify-between text-xs text-neutral-500 font-light">
+                    <p className="italic">• {drawing.caption}</p>
+                    <span className="text-[10px] font-mono text-neutral-400">시안 다이어그램</span>
+                  </div>
                 </div>
               ))}
             </div>

@@ -59,7 +59,7 @@ export default function Hero({ onSelectProject }: HeroProps) {
                 </span>
                 {activeProject.spec.awardOrStatus && (
                   <span className="px-2 py-0.5 bg-amber-500/90 text-neutral-950 text-[10px] font-semibold tracking-wider uppercase rounded-xs">
-                    공모 당선작
+                    {activeProject.spec.awardOrStatus}
                   </span>
                 )}
               </div>
@@ -73,10 +73,15 @@ export default function Hero({ onSelectProject }: HeroProps) {
                 {activeProject.titleEn}
               </p>
 
-              <span className="mt-3 inline-flex items-center gap-1.5 text-xs font-medium tracking-wider text-white/90 bg-neutral-900/60 backdrop-blur-sm px-3.5 py-1.5 rounded-full border border-white/20 group-hover:bg-white group-hover:text-neutral-950 transition-all">
-                <span>프로젝트 개요 & 도면 보기</span>
-                <span className="text-[10px]">→</span>
-              </span>
+              <div className="mt-3 flex flex-wrap items-center gap-3">
+                <span className="inline-flex items-center gap-1.5 text-xs font-medium tracking-wider text-white/90 bg-neutral-900/60 backdrop-blur-sm px-3.5 py-1.5 rounded-full border border-white/20 group-hover:bg-white group-hover:text-neutral-950 transition-all">
+                  <span>프로젝트 개요 & 도면 보기</span>
+                  <span className="text-[10px]">→</span>
+                </span>
+                <span className="text-[10px] text-neutral-400 font-mono tracking-wide">
+                  ※ 시안 연출 이미지 (실데이터 무상 반영)
+                </span>
+              </div>
             </button>
           </div>
 

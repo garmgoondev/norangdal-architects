@@ -29,7 +29,7 @@ export default function AboutSection() {
               {/* eslint-disable-next-line @next/next/no-img-element */}
               <img
                 src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?q=80&w=1200&auto=format&fit=crop"
-                alt="양인애 대표 건축사"
+                alt={`${STUDIO_INFO.founder} 대표 건축사`}
                 className="w-full h-full object-cover filter grayscale hover:grayscale-0 transition-all duration-700"
               />
               <div className="absolute bottom-0 inset-x-0 bg-gradient-to-t from-neutral-950/90 via-neutral-950/40 to-transparent p-6 text-white">
@@ -38,6 +38,9 @@ export default function AboutSection() {
                 </span>
                 <h3 className="text-2xl font-serif font-normal">{STUDIO_INFO.founder}</h3>
                 <p className="text-xs text-neutral-300 font-light mt-1">{STUDIO_INFO.license}</p>
+                <p className="text-[10px] text-amber-200/80 font-mono mt-2 pt-2 border-t border-white/10">
+                  ※ 대표 건축사 프로필 시안 컷 (실제 프로필 사진 전달 시 즉시 무상 교체)
+                </p>
               </div>
             </div>
 
@@ -95,17 +98,17 @@ export default function AboutSection() {
             <div className="p-6 bg-amber-900/5 border border-amber-900/20 rounded-xs flex items-center justify-between flex-wrap gap-4">
               <div>
                 <span className="text-[11px] font-mono tracking-widest text-amber-800 font-bold block mb-1">
-                  2024 PUBLIC COMPETITION WINNER
+                  2024 PUBLIC COMPETITION PRIZE WINNER
                 </span>
                 <p className="text-sm font-serif font-normal text-neutral-900">
-                  양주시 장애인 직업재활시설 건립공사 설계공모 당선 아틀리에
+                  양주시 남면 실내체육시설 건립공사 설계공모 입상 아틀리에
                 </p>
               </div>
               <a
                 href="#works"
                 className="text-xs font-semibold text-amber-800 hover:text-amber-900 underline underline-offset-4"
               >
-                당선작 도면 보기 →
+                입상작 도면 및 개요 보기 →
               </a>
             </div>
           </div>

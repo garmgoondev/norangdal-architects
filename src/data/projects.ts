@@ -8,6 +8,8 @@ export interface Project {
   location: string;
   thumbnail: string;
   images: string[];
+  isMockupImage?: boolean;
+  imageNotice?: string;
   drawings: {
     title: string;
     url: string;
@@ -33,13 +35,13 @@ export interface Project {
 
 export const PROJECTS: Project[] = [
   {
-    id: "yangju-rehabilitation-center",
-    titleKo: "양주시 장애인 직업재활시설 건립공사",
-    titleEn: "Yangju Vocational Rehabilitation Center",
+    id: "yangju-nammyeon-sports-center",
+    titleKo: "양주시 남면 실내체육시설 건립공사",
+    titleEn: "Yangju Nammyeon Indoor Sports Center",
     category: "PUBLIC",
-    categoryLabel: "공공 · 복지시설",
+    categoryLabel: "공공 · 체육시설",
     year: "2024",
-    location: "경기도 양주시",
+    location: "경기도 양주시 남면 신산리",
     thumbnail: "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?q=80&w=1600&auto=format&fit=crop",
     images: [
       "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?q=80&w=1600&auto=format&fit=crop",
@@ -47,111 +49,160 @@ export const PROJECTS: Project[] = [
       "https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?q=80&w=1600&auto=format&fit=crop",
       "https://images.unsplash.com/photo-1600566753190-17f0baa2a6c3?q=80&w=1600&auto=format&fit=crop"
     ],
+    isMockupImage: true,
+    imageNotice: "※ 본 이미지는 콘셉트 시안용 연출 이미지입니다. (실제 프로젝트 사진/도면 무상 교체 세팅 지원)",
     drawings: [
       {
-        title: "배치도 (Site Plan)",
+        title: "배치도 (Site Plan Concept)",
         url: "https://images.unsplash.com/photo-1503387762-592deb58ef4e?q=80&w=1200&auto=format&fit=crop",
-        caption: "자연 녹지 축과 보행자 진입로를 고려한 완만한 배치 계획"
+        caption: "자연 녹지 축과 보행자 진입로를 연계한 개방형 배치 계획"
       },
       {
-        title: "1층 평면도 (Ground Floor Plan)",
+        title: "기준층 평면도 (Floor Plan Concept)",
         url: "https://images.unsplash.com/photo-1581291518857-4e27b48ff24e?q=80&w=1200&auto=format&fit=crop",
-        caption: "장애인 이용자의 편의를 극대화한 무단차 수평 순환 동선"
+        caption: "다양한 실내 구기 종목과 주민 여가 프로그램을 수용하는 다목적 평면 구조"
       }
     ],
     spec: {
-      location: "경기도 양주시 산북동",
-      siteArea: "1,980.00 ㎡ (598.95평)",
-      buildingArea: "495.20 ㎡ (149.79평)",
-      grossArea: "1,320.60 ㎡ (399.48평)",
-      coverageRatio: "25.01 %",
-      floorAreaRatio: "66.69 %",
-      scale: "지하 1층, 지상 3층",
-      structure: "철근콘크리트조 (RC)",
-      exteriorFinish: "치장벽돌, 로이삼중유리, 알루미늄 루버",
-      principalArchitect: "양인애 (노랑달건축사사무소)",
-      team: "노랑달 설계팀 (김민지, 박성호)",
-      awardOrStatus: "설계공모 당선작 (1등 당선 / 실시설계 중)"
+      location: "경기도 양주시 남면 신산리 364-7 일원",
+      siteArea: "4,127.00 ㎡ (1,248.4평)",
+      buildingArea: "980.50 ㎡ (296.6평)",
+      grossArea: "약 1,500.00 ㎡ (453.7평)",
+      coverageRatio: "23.76 %",
+      floorAreaRatio: "36.34 %",
+      scale: "지상 2층",
+      structure: "철근콘크리트조 (RC) + 대공간 철골 트러스 지붕",
+      exteriorFinish: "치장벽돌, 로이복층유리, 알루미늄 복합패널",
+      principalArchitect: "이슬기 (노랑달건축사사무소)",
+      team: "노랑달 설계팀",
+      awardOrStatus: "설계공모 입상작 (Prize Winner)"
     },
-    summary: "자연과 호흡하는 중정형 배치를 통해 장애인 이용자에게 따뜻한 빛과 편안한 휴식을 선사하는 배려형 공공건축.",
+    summary: "지역 주민의 생활체육 활성화와 커뮤니티 화합을 이끄는 친환경 개방형 복합 체육시설 제안.",
     description: [
-      "양주시 장애인 직업재활시설 건립공사 설계공모 1등 당선작입니다.",
-      "단순한 보호시설을 넘어 자립과 회복의 공간이 될 수 있도록 중앙 중정을 중심으로 모든 훈련실과 휴게 공간을 유기적으로 연결했습니다.",
-      "단차 없는 유니버설 디자인(Universal Design)을 철저히 준수하였으며, 치장벽돌과 목재 루버의 질감을 활용하여 이용자들에게 심리적 안정감을 제공하도록 계획되었습니다."
+      "양주시 남면 실내체육시설 건립공사 설계공모 입상작입니다.",
+      "주변 자연경관 및 마을의 스케일과 자연스럽게 조화되도록 저층부의 매스를 분절하고, 수평적 루버와 벽돌의 따뜻한 물성을 강조했습니다.",
+      "체육관 이용자와 보행자의 동선을 입체적으로 분리하고, 사계절 채광과 자연 환기를 유도하는 에너지 절약형 친환경 공공건축으로 계획되었습니다."
     ]
   },
   {
-    id: "garak-louver-house",
-    titleKo: "가락동 루버하우스 (상가주택)",
-    titleEn: "Garak Louver House & Commercial",
-    category: "COMMERCIAL",
-    categoryLabel: "근린생활시설 · 상가주택",
-    year: "2023",
-    location: "서울특별시 송파구 가락동",
+    id: "eomsa-parking-tower",
+    titleKo: "엄사면 공영주차타워 조성사업",
+    titleEn: "Eomsa-myeon Public Parking Tower",
+    category: "PUBLIC",
+    categoryLabel: "공공 · 주차시설",
+    year: "2024",
+    location: "충청남도 계룡시 엄사면",
     thumbnail: "https://images.unsplash.com/photo-1545324418-cc1a3fa10c00?q=80&w=1600&auto=format&fit=crop",
     images: [
       "https://images.unsplash.com/photo-1545324418-cc1a3fa10c00?q=80&w=1600&auto=format&fit=crop",
       "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?q=80&w=1600&auto=format&fit=crop",
       "https://images.unsplash.com/photo-1577495508048-b635879837f1?q=80&w=1600&auto=format&fit=crop"
     ],
+    isMockupImage: true,
+    imageNotice: "※ 본 이미지는 콘셉트 시안용 연출 이미지입니다. (실제 프로젝트 사진/도면 무상 교체 세팅 지원)",
     drawings: [
       {
-        title: "입면도 (Elevation)",
+        title: "입면 파사드 분석도 (Facade Concept)",
         url: "https://images.unsplash.com/photo-1503387762-592deb58ef4e?q=80&w=1200&auto=format&fit=crop",
-        caption: "도시 가로변 시선을 조율하는 테라코타 루버 시스템"
+        caption: "알루미늄 루버 각도 변화를 통해 소음과 차폐, 환기 효율을 극대화한 파사드"
       }
     ],
     spec: {
-      location: "서울특별시 송파구 가락동",
-      siteArea: "218.40 ㎡ (66.06평)",
-      buildingArea: "129.80 ㎡ (39.26평)",
-      grossArea: "435.50 ㎡ (131.73평)",
-      coverageRatio: "59.43 %",
-      floorAreaRatio: "199.40 %",
-      scale: "지상 5층",
-      structure: "철근콘크리트조",
-      exteriorFinish: "화이트 노출콘크리트, 테라코타 루버, 로이복층유리",
-      principalArchitect: "양인애 (노랑달건축사사무소)",
-      team: "노랑달 설계팀"
+      location: "충청남도 계룡시 엄사면 중심상업지역",
+      siteArea: "1,850.00 ㎡",
+      buildingArea: "1,110.00 ㎡",
+      grossArea: "3,850.00 ㎡",
+      coverageRatio: "60.00 %",
+      floorAreaRatio: "208.10 %",
+      scale: "지상 4층",
+      structure: "철골철근콘크리트조 (SRC)",
+      exteriorFinish: "수직 알루미늄 루버, 테라코타 패널, 노출콘크리트",
+      principalArchitect: "이슬기 (노랑달건축사사무소)",
+      team: "노랑달 설계팀",
+      awardOrStatus: "제안 설계공모 입상작 (Prize Winner)"
     },
-    summary: "1~2층 상가의 가시성과 상층부 주거세대의 사생활 보호를 수직 루버로 명쾌하게 해결한 송파구 도심형 상가주택.",
+    summary: "도심 주차난을 해소하고 가로 경관을 개선하는 조형미를 갖춘 차세대 친환경 공영주차타워 제안.",
     description: [
-      "송파구 가락동 일반주거지역의 법적 일조권 사선제한과 주차 규제를 극복하며 최대 용적률을 확보한 프로젝트입니다.",
-      "가로와 맞닿은 저층부는 시원한 전면 유리로 상업적 매력을 극대화하고, 3~5층 주거 세대는 테라코타 루버로 외부 시선을 차단하면서도 풍부한 일조를 들였습니다."
+      "엄사면 공영주차타워 조성사업 제안 설계공모 입상작입니다.",
+      "기존 주차전용 건축물의 폐쇄적이고 삭막한 이미지를 탈피하여, 가로와 소통하는 수직 루버와 야간 경관조명을 결합한 도시 랜드마크를 제안했습니다.",
+      "입체적인 보차분리와 최적의 회전반경 설계를 통해 초보 운전자도 안전하고 쾌적하게 이용할 수 있도록 배려했습니다."
     ]
   },
   {
-    id: "moonlight-house-yangpyeong",
-    titleKo: "양평 문호리 달빛재 (단독주택)",
-    titleEn: "Moonlight House in Munho-ri",
-    category: "RESIDENCE",
-    categoryLabel: "단독주택",
+    id: "bangi-courtyard-house",
+    titleKo: "방이동 어반 코트야드 (상가주택)",
+    titleEn: "Bangi Urban Courtyard Mixed-Use",
+    category: "COMMERCIAL",
+    categoryLabel: "근린생활시설 · 상가주택",
     year: "2023",
-    location: "경기도 양평군 서종면",
+    location: "서울특별시 송파구 방이동",
     thumbnail: "https://images.unsplash.com/photo-1512917774080-9991f1c4c750?q=80&w=1600&auto=format&fit=crop",
     images: [
       "https://images.unsplash.com/photo-1512917774080-9991f1c4c750?q=80&w=1600&auto=format&fit=crop",
-      "https://images.unsplash.com/photo-1613490493576-7fde63acd811?q=80&w=1600&auto=format&fit=crop",
-      "https://images.unsplash.com/photo-1600585154526-990dced4db0d?q=80&w=1600&auto=format&fit=crop"
+      "https://images.unsplash.com/photo-1600585154526-990dced4db0d?q=80&w=1600&auto=format&fit=crop",
+      "https://images.unsplash.com/photo-1600607687920-4e2a09cf159d?q=80&w=1600&auto=format&fit=crop"
     ],
+    isMockupImage: true,
+    imageNotice: "※ 본 이미지는 콘셉트 시안용 연출 이미지입니다. (실제 프로젝트 사진/도면 무상 교체 세팅 지원)",
     drawings: [
       {
-        title: "단면도 (Section)",
+        title: "단면 다이어그램 (Section Concept)",
+        url: "https://images.unsplash.com/photo-1581291518857-4e27b48ff24e?q=80&w=1200&auto=format&fit=crop",
+        caption: "하부 근린생활시설과 상부 임대주택의 채광과 프라이버시를 분리한 단면 구성"
+      }
+    ],
+    spec: {
+      location: "서울특별시 송파구 방이동 (올림픽공원 인근)",
+      siteArea: "218.40 ㎡ (66.07평)",
+      buildingArea: "128.80 ㎡ (38.96평)",
+      grossArea: "432.10 ㎡ (130.71평)",
+      coverageRatio: "58.97 %",
+      floorAreaRatio: "197.85 %",
+      scale: "지하 1층, 지상 5층",
+      structure: "철근콘크리트조 (RC)",
+      exteriorFinish: "모노타일, 유로폼 노출콘크리트, 로이삼중유리",
+      principalArchitect: "이슬기 (노랑달건축사사무소)",
+      team: "노랑달 설계팀"
+    },
+    summary: "올림픽공원의 푸른 결을 품고 가로 활성화와 주거 쾌적성을 양립시킨 송파구 도심형 상가주택.",
+    description: [
+      "방이동 주택가 모퉁이 대지의 불리한 일조권 사선을 유려한 테라스 매스로 치환한 프로젝트입니다.",
+      "1~2층은 높은 층고의 트렌디한 F&B 및 공방 공간으로 계획하고, 상층부는 마당을 품은 중정형 단독 주거를 구성하여 건축주의 임대수익과 삶의 질을 동시에 극대화했습니다."
+    ]
+  },
+  {
+    id: "yangpyeong-moonlight-house",
+    titleKo: "양평 문호리 달빛재 (단독주택)",
+    titleEn: "Yangpyeong Moonlight House",
+    category: "RESIDENCE",
+    categoryLabel: "단독주택 · 전원주거",
+    year: "2023",
+    location: "경기도 양평군 서종면 문호리",
+    thumbnail: "https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?q=80&w=1600&auto=format&fit=crop",
+    images: [
+      "https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?q=80&w=1600&auto=format&fit=crop",
+      "https://images.unsplash.com/photo-1600585152220-90363fe7e115?q=80&w=1600&auto=format&fit=crop"
+    ],
+    isMockupImage: true,
+    imageNotice: "※ 본 이미지는 콘셉트 시안용 연출 이미지입니다. (실제 프로젝트 사진/도면 무상 교체 세팅 지원)",
+    drawings: [
+      {
+        title: "배치 및 일조 분석도 (Sunlight Analysis)",
         url: "https://images.unsplash.com/photo-1503387762-592deb58ef4e?q=80&w=1200&auto=format&fit=crop",
-        caption: "북한강 조망을 담는 2개 층 오픈형 보이드 공간 단면"
+        caption: "사계절 일사각도를 고려한 처마 돌출 길이 및 안마당 채광 계획"
       }
     ],
     spec: {
       location: "경기도 양평군 서종면 문호리",
-      siteArea: "580.00 ㎡ (175.45평)",
-      buildingArea: "112.30 ㎡ (33.97평)",
-      grossArea: "186.40 ㎡ (56.38평)",
-      coverageRatio: "19.36 %",
+      siteArea: "620.00 ㎡ (187.55평)",
+      buildingArea: "115.40 ㎡ (34.91평)",
+      grossArea: "199.20 ㎡ (60.26평)",
+      coverageRatio: "18.61 %",
       floorAreaRatio: "32.13 %",
       scale: "지상 2층",
       structure: "경골목구조 + 철근콘크리트 기단",
       exteriorFinish: "세라믹사이딩, 알루미늄 징크, 탄화목 루버",
-      principalArchitect: "양인애 (노랑달건축사사무소)",
+      principalArchitect: "이슬기 (노랑달건축사사무소)",
       team: "노랑달 설계팀"
     },
     summary: "북한강의 유려한 능선과 마당을 실내로 끌어들여 사계절 변화를 온전히 누리는 현대 단독주택.",
@@ -173,6 +224,8 @@ export const PROJECTS: Project[] = [
       "https://images.unsplash.com/photo-1497366216548-37526070297c?q=80&w=1600&auto=format&fit=crop",
       "https://images.unsplash.com/photo-1497366811353-6870744d04b2?q=80&w=1600&auto=format&fit=crop"
     ],
+    isMockupImage: true,
+    imageNotice: "※ 본 이미지는 콘셉트 시안용 연출 이미지입니다. (실제 프로젝트 사진/도면 무상 교체 세팅 지원)",
     drawings: [
       {
         title: "구조보강 계획도 (Structural Plan)",
@@ -190,50 +243,13 @@ export const PROJECTS: Project[] = [
       scale: "지하 1층, 지상 4층",
       structure: "기존 RC 구조 + H형강 철골보강",
       exteriorFinish: "타공 알루미늄 패널, 유리 커튼월",
-      principalArchitect: "양인애 (노랑달건축사사무소)",
+      principalArchitect: "이슬기 (노랑달건축사사무소)",
       team: "노랑달 설계팀"
     },
-    summary: "30년 된 노후 적벽돌 건물을 승강기 신설과 구조보강을 통해 임대 가치를 250% 상승시킨 도심 재생 리모델링.",
+    summary: "노후 건물을 승강기 신설과 구조보강을 통해 임대 가치와 공간 효율을 극대화한 도심 재생 리모델링.",
     description: [
-      "송파구 문정동의 노후 다가구 주택을 크리에이티브 스타트업을 위한 복합 근생 사옥으로 재탄생시켰습니다.",
+      "송파구 문정동의 노후 건물을 크리에이티브 오피스를 위한 복합 근생 사옥으로 재탄생시켰습니다.",
       "내력벽을 선별적으로 철거하고 H빔으로 구조를 보강하여 넓고 기둥 없는 열린 업무 공간을 구현하였으며, 타공 알루미늄 패널로 현대적인 도심 파사드를 완성했습니다."
-    ]
-  },
-  {
-    id: "wirye-canopy-pavilion",
-    titleKo: "위례 어반 캐노피 파빌리온",
-    titleEn: "Wirye Urban Canopy Pavilion",
-    category: "PUBLIC",
-    categoryLabel: "공공 · 쉼터시설",
-    year: "2024",
-    location: "서울특별시 송파구 위례동",
-    thumbnail: "https://images.unsplash.com/photo-1513694203232-719a280e022f?q=80&w=1600&auto=format&fit=crop",
-    images: [
-      "https://images.unsplash.com/photo-1513694203232-719a280e022f?q=80&w=1600&auto=format&fit=crop"
-    ],
-    drawings: [
-      {
-        title: "개념 다이어그램 (Concept Diagram)",
-        url: "https://images.unsplash.com/photo-1503387762-592deb58ef4e?q=80&w=1200&auto=format&fit=crop",
-        caption: "곡면 목구조 집성재를 활용한 비정형 지붕 프레임 분석"
-      }
-    ],
-    spec: {
-      location: "서울특별시 송파구 위례동",
-      siteArea: "450.00 ㎡",
-      buildingArea: "68.50 ㎡",
-      grossArea: "68.50 ㎡",
-      coverageRatio: "15.22 %",
-      floorAreaRatio: "15.22 %",
-      scale: "지상 1층",
-      structure: "글루램 (Glulam) 목구조",
-      exteriorFinish: "구조용 집성목, 티타늄 아연판",
-      principalArchitect: "양인애 (노랑달건축사사무소)",
-      team: "노랑달 설계팀"
-    },
-    summary: "위례신도시 주민들의 일상 산책로에 따뜻한 쉼터를 제공하는 유려한 곡면 목구조 공공 쉼터.",
-    description: [
-      "보행자 전용도로변에 위치한 소규모 공공 프로젝트로, 목재의 유려한 곡선과 그늘을 통해 도시민에게 휴식과 만남의 장소를 제공합니다."
     ]
   }
 ];
@@ -241,27 +257,29 @@ export const PROJECTS: Project[] = [
 export const STUDIO_INFO = {
   nameKo: "노랑달 건축사사무소",
   nameEn: "NORANGDAL ARCHITECTS",
-  founder: "양인애",
+  founder: "이슬기",
   title: "대표 건축사 / KIRA",
   license: "대한건축사협회 정회원 (대한민국 공인 건축사)",
-  address: "서울특별시 송파구 가락동 78 (송파대로)",
+  address: "서울특별시 송파구 백제고분로 446, 송암빌딩 3층 3076호 (방이동)",
   tel: "02-402-2646",
-  mobile: "010-8260-2646",
+  mobile: "010-9110-3161",
   email: "norangdal@naver.com",
   blogUrl: "https://blog.naver.com/norangdal",
   instagramUrl: "https://instagram.com/norangdal_architects",
   statement: "우리는 대지가 품은 고유한 시간과 도시의 결을 읽고, 사람의 온기와 자연의 빛이 머무는 건강한 공간을 설계합니다.",
   philosophy: [
-    "노랑달 건축사사무소는 서울 송파구를 기반으로 신축 주거, 상가주택, 공공건축, 대수선 리모델링까지 폭넓은 스펙트럼의 설계를 수행하는 건축 아틀리에입니다.",
+    "노랑달 건축사사무소는 서울 송파구를 기반으로 공공건축 설계공모, 주거 및 근린생활시설 기획설계, 건축공사 및 해체공사 감리까지 폭넓은 스펙트럼의 건축 실무를 수행하는 아틀리에입니다.",
     "설계는 단순한 조형 작업이 아닌, 건축주의 삶과 예산, 법적 테두리와 공공성의 균형을 찾아가는 정밀한 여정입니다.",
-    "설계공모 당선으로 입증된 디자인 역량과 송파·수도권 일대의 풍부한 인허가 경험을 바탕으로, 최초 기획 검토부터 완공 후 감리까지 대표 건축사가 직접 책임 있게 동행합니다."
+    "설계공모 입상으로 입증된 조형적 역량과 서울시 감리자로서의 풍부한 현장 인허가 경험을 바탕으로, 최초 기획 검토부터 완공 후 감리까지 대표 건축사가 직접 책임 있게 동행합니다."
   ],
   credentials: [
     "대한건축사협회 (KIRA) 정회원 공인 건축사",
-    "서울시립대학교 건축학 석사 (M.Arch)",
-    "양주시 장애인 직업재활시설 건립공사 설계공모 1등 당선 (2024)",
-    "서울시 송파구 마을건축가 / 공공건축 자문위원 위촉",
-    "단독주택, 상가주택, 공공복지시설 다수 인허가 및 감리 완수"
+    "서울특별시건축사회 신진건축사위원회 위원",
+    "한국여성건축가협회 정회원",
+    "서울특별시 건축공사 감리자 및 해체공사 감리자 명부 등재",
+    "양주시 남면 실내체육시설 건립공사 설계공모 입상 (2024)",
+    "엄사면 공영주차타워 조성사업 제안 설계공모 입상 (2024)",
+    "공공건축 설계공모 심사위원 및 예비심사위원 위촉"
   ],
   processSteps: [
     {

@@ -39,10 +39,15 @@ export default function WorksSection({ onSelectProject }: WorksSectionProps) {
               주요 설계 작업
             </h2>
           </div>
-          <p className="text-xs sm:text-sm text-neutral-500 font-light mt-3 md:mt-0 max-w-md">
-            공공 설계공모 당선작부터 도심 상가주택, 자연 속 단독주택, 노후 건물 대수선까지
-            장소의 가치를 극대화하는 노랑달의 설계 아카이브입니다.
-          </p>
+          <div className="mt-3 md:mt-0 max-w-md">
+            <p className="text-xs sm:text-sm text-neutral-500 font-light">
+              공공 설계공모 입상작부터 도심 상가주택, 단독주택, 노후 건물 대수선까지
+              장소의 가치를 극대화하는 노랑달의 설계 아카이브입니다.
+            </p>
+            <p className="text-[10px] font-mono text-amber-900/70 mt-1">
+              ※ 포트폴리오 시안 안내: 현재 이미지는 쇼룸 시안용 연출 이미지이며, 대표님의 실제 준공 사진 및 도면으로 100% 무상 교체 세팅됩니다.
+            </p>
+          </div>
         </div>
 
         {/* Category Filters */}
@@ -85,9 +90,14 @@ export default function WorksSection({ onSelectProject }: WorksSectionProps) {
                 {project.spec.awardOrStatus && (
                   <div className="absolute top-3 left-3 px-2.5 py-1 bg-amber-500 text-neutral-950 text-[10px] font-bold tracking-wider rounded-xs flex items-center gap-1 shadow-xs">
                     <Award className="w-3 h-3" />
-                    <span>공모 당선</span>
+                    <span>{project.spec.awardOrStatus}</span>
                   </div>
                 )}
+
+                {/* Conceptual Image Tag */}
+                <div className="absolute bottom-2 left-2 px-2 py-0.5 bg-neutral-950/70 backdrop-blur-xs text-white/80 text-[9px] font-mono tracking-wider rounded-xs pointer-events-none">
+                  시안 연출 이미지
+                </div>
 
                 {/* Quick Action Overlay Icon */}
                 <div className="absolute bottom-3 right-3 w-8 h-8 rounded-full bg-white/90 text-neutral-900 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300 shadow-sm">
