@@ -174,7 +174,7 @@ export default function ConsultationSection() {
                   <input
                     type="text"
                     required
-                    placeholder="예: 서울특별시 송파구 가락동 00-0번지 (또는 경기 양평군 서종면)"
+                    placeholder="예: 서울특별시 송파구 방이동 00-0번지 (또는 경기 양평군 서종면)"
                     value={formData.location}
                     onChange={(e) => setFormData({ ...formData, location: e.target.value })}
                     className="w-full px-3.5 py-2.5 text-xs bg-white border border-neutral-300 rounded-xs focus:outline-hidden focus:border-neutral-900"
@@ -193,11 +193,12 @@ export default function ConsultationSection() {
                       className="w-full px-3.5 py-2.5 text-xs bg-white border border-neutral-300 rounded-xs focus:outline-hidden focus:border-neutral-900"
                     >
                       <option>단독주택 (Residence)</option>
-                      <option>상가주택 / 다가구주택 (Rental House)</option>
-                      <option>근린생활시설 / 사옥 / 카페 (Commercial)</option>
-                      <option>노후건물 대수선 · 리모델링 (Renovation)</option>
-                      <option>공공건축 / 현상설계 (Public)</option>
-                      <option>기타 시설</option>
+                      <option>상가주택 (Commercial & Residential)</option>
+                      <option>다가구 · 다세대주택 (Multi-Family / Multi-Unit)</option>
+                      <option>주상복합 / 근린생활시설 (Mixed-Use & Commercial)</option>
+                      <option>업무시설 / 오피스 사옥 (Office)</option>
+                      <option>대수선 · 리모델링 (Renovation)</option>
+                      <option>토지 매입 전 사업성 검토 기획설계 (Feasibility)</option>
                     </select>
                   </div>
 

@@ -25,7 +25,10 @@ export default function Footer() {
                 </span>
               </div>
             </div>
-            <p className="text-neutral-400 max-w-md leading-relaxed mt-2">
+            <p className="text-[11px] text-amber-400/90 font-mono tracking-wide mt-2">
+              {STUDIO_INFO.positioning}
+            </p>
+            <p className="text-neutral-400 max-w-md leading-relaxed mt-1">
               {STUDIO_INFO.statement}
             </p>
           </div>

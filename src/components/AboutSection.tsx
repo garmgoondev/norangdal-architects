@@ -61,6 +61,16 @@ export default function AboutSection() {
 
           {/* Right Column: Studio Manifesto & Story (7 cols) */}
           <div className="lg:col-span-7 space-y-8">
+            {/* Specialization Scope Pill Banner */}
+            <div className="p-4 bg-amber-500/10 border-l-3 border-amber-600 rounded-r-xs">
+              <span className="text-[11px] font-mono font-bold text-amber-900 tracking-wider block mb-1">
+                {STUDIO_INFO.positioning}
+              </span>
+              <p className="text-xs text-neutral-700 font-light leading-relaxed">
+                {STUDIO_INFO.scopeText} · 설계부터 준공까지 다수 경력 보유
+              </p>
+            </div>
+
             <div className="space-y-5 text-sm sm:text-base text-neutral-700 leading-relaxed font-light">
               {STUDIO_INFO.philosophy.map((paragraph, idx) => (
                 <p key={idx}>{paragraph}</p>
