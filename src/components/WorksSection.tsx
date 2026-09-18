@@ -2,23 +2,22 @@
 
 import React, { useState } from "react";
 import { PROJECTS, Project } from "@/data/projects";
-import { Award, ArrowUpRight } from "lucide-react";
+import { Award, ArrowUpRight, Sparkles } from "lucide-react";
 
 interface WorksSectionProps {
   onSelectProject: (project: Project) => void;
 }
 
-type CategoryType = "ALL" | "PUBLIC" | "RESIDENCE" | "COMMERCIAL" | "RENOVATION";
+type CategoryType = "ALL" | "PUBLIC" | "COMMERCIAL" | "RENOVATION";
 
 export default function WorksSection({ onSelectProject }: WorksSectionProps) {
   const [selectedCategory, setSelectedCategory] = useState<CategoryType>("ALL");
 
   const categories: { key: CategoryType; label: string }[] = [
-    { key: "ALL", label: "전체 작품 (ALL)" },
-    { key: "PUBLIC", label: "공공 · 복지 (PUBLIC)" },
-    { key: "RESIDENCE", label: "단독주택 (RESIDENCE)" },
-    { key: "COMMERCIAL", label: "상가 · 근생 (COMMERCIAL)" },
-    { key: "RENOVATION", label: "대수선 · 리모델링 (RENOVATION)" },
+    { key: "ALL", label: "전체 작품 (ALL 9)" },
+    { key: "PUBLIC", label: "공공 · 문화 · 복지 (PUBLIC)" },
+    { key: "COMMERCIAL", label: "업무 · 코워킹 (COMMERCIAL)" },
+    { key: "RENOVATION", label: "공간 환경개선 (RENOVATION)" },
   ];
 
   const filteredProjects =
@@ -32,20 +31,20 @@ export default function WorksSection({ onSelectProject }: WorksSectionProps) {
         {/* Section Header */}
         <div className="flex flex-col md:flex-row md:items-end justify-between mb-12 pb-6 border-b border-neutral-300">
           <div>
-            <span className="text-[11px] font-sans tracking-[0.25em] text-neutral-500 uppercase block mb-2">
-              ARCHITECTURAL WORKS
+            <span className="text-[11px] font-sans tracking-[0.25em] text-neutral-500 uppercase block mb-2 font-semibold">
+              NORANGDAL ARCHITECTURAL WORKS
             </span>
             <h2 className="text-3xl sm:text-4xl font-serif font-light text-neutral-900 tracking-tight">
-              주요 설계 작업
+              주요 프로젝트 아카이브
             </h2>
           </div>
           <div className="mt-3 md:mt-0 max-w-md">
             <p className="text-xs sm:text-sm text-neutral-500 font-light">
-              공공 설계공모 입상작부터 도심 상가주택, 단독주택, 노후 건물 대수선까지
-              장소의 가치를 극대화하는 노랑달의 설계 아카이브입니다.
+              복합커뮤니티센터, 공공도서관, 코워킹스페이스부터 민속예술관과 환경개선까지
+              사용자의 이야기를 바탕으로 구현된 노랑달건축사사무소의 9대 공식 설계 프로젝트입니다.
             </p>
             <p className="text-[10px] font-mono text-amber-900/70 mt-1">
-              ※ 본 포트폴리오는 쇼룸 시안용 연출 이미지이며, 추후 실제 프로젝트 사진 및 도면으로 교체 반영됩니다.
+              ※ 본 포트폴리오는 쇼룸 시안용 연출 이미지이며, 실제 설계안 데이터 및 건축가 의도문이 100% 동기화되어 있습니다.
             </p>
           </div>
         </div>
@@ -88,9 +87,9 @@ export default function WorksSection({ onSelectProject }: WorksSectionProps) {
 
                 {/* Status Badge */}
                 {project.spec.awardOrStatus && (
-                  <div className="absolute top-3 left-3 px-2.5 py-1 bg-amber-500 text-neutral-950 text-[10px] font-bold tracking-wider rounded-xs flex items-center gap-1 shadow-xs">
-                    <Award className="w-3 h-3" />
-                    <span>{project.spec.awardOrStatus}</span>
+                  <div className="absolute top-3 left-3 px-2.5 py-1 bg-neutral-900/80 backdrop-blur-xs text-amber-300 text-[10px] font-mono tracking-wider rounded-xs flex items-center gap-1 shadow-xs border border-white/10">
+                    <Sparkles className="w-3 h-3 text-amber-400" />
+                    <span>{project.spec.use}</span>
                   </div>
                 )}
 
@@ -115,9 +114,15 @@ export default function WorksSection({ onSelectProject }: WorksSectionProps) {
                     <span>{project.year}</span>
                   </div>
 
-                  <h3 className="text-lg font-serif font-normal text-neutral-900 group-hover:text-amber-800 transition-colors mb-2 leading-snug">
+                  <h3 className="text-lg font-serif font-normal text-neutral-900 group-hover:text-amber-800 transition-colors mb-1.5 leading-snug">
                     {project.titleKo}
                   </h3>
+
+                  {project.conceptTitle && (
+                    <p className="text-xs font-serif text-amber-950/80 font-normal italic mb-2">
+                      &ldquo;{project.conceptTitle}&rdquo;
+                    </p>
+                  )}
 
                   <p className="text-xs text-neutral-500 line-clamp-2 leading-relaxed font-light mb-4">
                     {project.summary}
@@ -125,9 +130,9 @@ export default function WorksSection({ onSelectProject }: WorksSectionProps) {
                 </div>
 
                 <div className="pt-3 border-t border-neutral-100 flex items-center justify-between text-[11px] text-neutral-400 font-light">
-                  <span>{project.location}</span>
-                  <span className="text-neutral-900 group-hover:translate-x-0.5 transition-transform font-medium">
-                    도면 & 사양 확인 →
+                  <span className="truncate max-w-[180px]">{project.location.split(" ")[0]} {project.location.split(" ")[1] || ""}</span>
+                  <span className="text-neutral-900 group-hover:translate-x-0.5 transition-transform font-medium shrink-0">
+                    상세 및 도면 확인 →
                   </span>
                 </div>
               </div>

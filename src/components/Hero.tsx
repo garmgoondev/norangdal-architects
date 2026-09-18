@@ -15,29 +15,11 @@ export default function Hero({ onSelectProject }: HeroProps) {
   useEffect(() => {
     const timer = setInterval(() => {
       setCurrentIdx((prev) => (prev + 1) % featured.length);
-    }, 6000);
+    }, 6500);
     return () => clearInterval(timer);
   }, [featured.length]);
 
   const activeProject = featured[currentIdx];
-
-  // UTAA-style minimal caption helper: [Location/Building Name], [Year]
-  const getHeroCaption = (p: Project) => {
-    switch (p.id) {
-      case "yangju-nammyeon-sports-center":
-        return `양주시 남면 실내체육시설, ${p.year}`;
-      case "eomsa-parking-tower":
-        return `엄사면 공영주차타워, ${p.year}`;
-      case "bangi-courtyard-house":
-        return `방이동 상가주택 [어반 코트야드], ${p.year}`;
-      case "yangpyeong-moonlight-house":
-        return `양평 문호리 단독주택 [달빛재], ${p.year}`;
-      case "munjeong-cube-renovation":
-        return `문정동 대수선 [큐브오피스], ${p.year}`;
-      default:
-        return `${p.titleKo}, ${p.year}`;
-    }
-  };
 
   return (
     <section className="relative w-full h-[90vh] min-h-[580px] max-h-[960px] overflow-hidden bg-neutral-950 text-white select-none">
@@ -48,16 +30,16 @@ export default function Hero({ onSelectProject }: HeroProps) {
           onClick={() => onSelectProject(p)}
           className={`absolute inset-0 transition-opacity duration-1000 ease-in-out cursor-pointer ${
             idx === currentIdx ? "opacity-100 scale-100" : "opacity-0 scale-102 pointer-events-none"
-          } transition-transform duration-6000`}
+          } transition-transform duration-6500`}
         >
           {/* eslint-disable-next-line @next/next/no-img-element */}
           <img
             src={p.thumbnail}
             alt={p.titleKo}
-            className="w-full h-full object-cover brightness-[0.96] hover:scale-101 transition-transform duration-1000"
+            className="w-full h-full object-cover brightness-[0.95] hover:scale-101 transition-transform duration-1000"
           />
-          {/* Minimal bottom-right shadow vignette only for subtle text readability */}
-          <div className="absolute inset-x-0 bottom-0 h-24 bg-gradient-to-t from-neutral-950/50 via-neutral-950/10 to-transparent pointer-events-none" />
+          {/* Minimal bottom shadow vignette only for subtle text readability */}
+          <div className="absolute inset-x-0 bottom-0 h-28 bg-gradient-to-t from-neutral-950/60 via-neutral-950/15 to-transparent pointer-events-none" />
         </div>
       ))}
 
@@ -65,9 +47,9 @@ export default function Hero({ onSelectProject }: HeroProps) {
       <div className="absolute top-0 inset-x-0 h-[2px] bg-white/15 z-30 pointer-events-none">
         <div
           key={currentIdx}
-          className="h-full bg-amber-400 animate-slide-progress"
+          className="h-full bg-amber-400"
           style={{
-            animation: "growProgress 6s linear infinite"
+            animation: "growProgress 6.5s linear infinite"
           }}
         />
       </div>
@@ -106,13 +88,13 @@ export default function Hero({ onSelectProject }: HeroProps) {
           className="group text-right cursor-pointer flex flex-col items-end"
         >
           <div className="text-xs sm:text-sm font-sans font-light tracking-wide text-white/95 drop-shadow-md group-hover:text-amber-300 transition-colors flex items-center gap-1.5">
-            <span>{getHeroCaption(activeProject)}</span>
+            <span>{activeProject.titleKo}, {activeProject.year}</span>
             <span className="text-[10px] opacity-0 group-hover:opacity-100 group-hover:translate-x-0.5 transition-all">
               →
             </span>
           </div>
           <span className="text-[10px] text-white/50 font-mono tracking-wider mt-0.5">
-            시안용 연출 이미지
+            시안용 연출 이미지 (실데이터 반영 가능)
           </span>
         </button>
       </div>

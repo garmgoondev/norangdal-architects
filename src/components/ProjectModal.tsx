@@ -2,7 +2,7 @@
 
 import React, { useState, useEffect } from "react";
 import { Project } from "@/data/projects";
-import { X, Award, ChevronLeft, ChevronRight, FileText, Compass, Layers } from "lucide-react";
+import { X, Award, ChevronLeft, ChevronRight, FileText, Compass, Layers, Quote } from "lucide-react";
 
 interface ProjectModalProps {
   project: Project | null;
@@ -44,7 +44,10 @@ export default function ProjectModal({
               {project.categoryLabel} • {project.year}
             </span>
             <h3 className="text-base sm:text-lg font-serif font-light text-white truncate max-w-xl">
-              {project.titleKo}
+              {project.titleKo}{" "}
+              <span className="text-xs text-neutral-400 font-sans font-light">
+                ({project.titleEn})
+              </span>
             </h3>
           </div>
 
@@ -68,7 +71,7 @@ export default function ProjectModal({
             }`}
           >
             <Layers className="w-3.5 h-3.5" />
-            <span>준공 및 투시도 사진 ({project.images.length})</span>
+            <span>건축 투시도 및 시안 ({project.images.length})</span>
           </button>
           <button
             onClick={() => setActiveTab("drawings")}
@@ -79,7 +82,7 @@ export default function ProjectModal({
             }`}
           >
             <Compass className="w-3.5 h-3.5" />
-            <span>건축 도면 & 다이어그램 ({project.drawings.length})</span>
+            <span>개념 도면 & 다이어그램 ({project.drawings.length})</span>
           </button>
           <button
             onClick={() => setActiveTab("spec")}
@@ -90,7 +93,7 @@ export default function ProjectModal({
             }`}
           >
             <FileText className="w-3.5 h-3.5" />
-            <span>건축개요 & 사양표</span>
+            <span>프로젝트 사양표 & 크레딧</span>
           </button>
         </div>
 
@@ -143,28 +146,41 @@ export default function ProjectModal({
               </div>
 
               {/* Photo Thumbnails */}
-              <div className="flex gap-2 overflow-x-auto pb-2">
-                {project.images.map((img, idx) => (
-                  <button
-                    key={idx}
-                    onClick={() => setCurrentPhotoIdx(idx)}
-                    className={`relative w-24 h-16 shrink-0 rounded-xs overflow-hidden border-2 transition-all cursor-pointer ${
-                      idx === currentPhotoIdx
-                        ? "border-neutral-900 opacity-100 scale-95"
-                        : "border-transparent opacity-60 hover:opacity-90"
-                    }`}
-                  >
-                    {/* eslint-disable-next-line @next/next/no-img-element */}
-                    <img src={img} alt="thumbnail" className="w-full h-full object-cover" />
-                  </button>
-                ))}
-              </div>
+              {project.images.length > 1 && (
+                <div className="flex gap-2 overflow-x-auto pb-2">
+                  {project.images.map((img, idx) => (
+                    <button
+                      key={idx}
+                      onClick={() => setCurrentPhotoIdx(idx)}
+                      className={`relative w-24 h-16 shrink-0 rounded-xs overflow-hidden border-2 transition-all cursor-pointer ${
+                        idx === currentPhotoIdx
+                          ? "border-neutral-900 opacity-100 scale-95"
+                          : "border-transparent opacity-60 hover:opacity-90"
+                      }`}
+                    >
+                      {/* eslint-disable-next-line @next/next/no-img-element */}
+                      <img src={img} alt="thumbnail" className="w-full h-full object-cover" />
+                    </button>
+                  ))}
+                </div>
+              )}
 
-              {/* Narrative Summary */}
-              <div className="bg-white p-6 rounded-xs border border-neutral-200">
-                <h4 className="text-xs font-bold tracking-widest text-neutral-400 uppercase mb-3">
-                  DESIGN CONCEPT & NARRATIVE
-                </h4>
+              {/* Architectural Concept Statement & Narrative */}
+              <div className="bg-white p-6 sm:p-8 rounded-xs border border-neutral-200 space-y-4">
+                {project.conceptTitle && (
+                  <div className="flex items-start gap-3 pb-4 border-b border-neutral-100">
+                    <Quote className="w-6 h-6 text-amber-800 shrink-0 mt-1" />
+                    <div>
+                      <span className="text-[10px] font-mono text-amber-800 tracking-widest uppercase font-bold block">
+                        ARCHITECTURAL CONCEPT
+                      </span>
+                      <h4 className="text-xl font-serif text-neutral-900 font-normal mt-0.5">
+                        {project.conceptTitle}
+                      </h4>
+                    </div>
+                  </div>
+                )}
+
                 <div className="space-y-3 text-sm text-neutral-700 leading-relaxed font-light">
                   {project.description.map((p, i) => (
                     <p key={i}>{p}</p>
@@ -178,7 +194,7 @@ export default function ProjectModal({
           {activeTab === "drawings" && (
             <div className="space-y-8">
               <div className="bg-amber-50/80 border-l-4 border-amber-600 p-4 text-xs text-amber-900">
-                <strong>도면 뷰어 시안 안내</strong>: 본 도면 다이어그램은 도면 뷰어 인터랙션 구현을 위한 표준 콘셉트 도면이며, 추후 실제 프로젝트 도면으로 반영됩니다.
+                <strong>도면 뷰어 시안 안내</strong>: 본 개념 도면은 노랑달건축사사무소의 실제 설계 프로젝트 제원을 기반으로 한 다이어그램이며, 정식 런칭 시 실제 건축 도면(CAD/BIM)으로 반영됩니다.
               </div>
 
               {project.drawings.map((drawing, idx) => (
@@ -192,7 +208,7 @@ export default function ProjectModal({
                       <span>{drawing.title}</span>
                     </h4>
                     <span className="text-xs text-neutral-400 font-mono">
-                      DRAWING 0{idx + 1}
+                      CONCEPT 0{idx + 1}
                     </span>
                   </div>
 
@@ -217,41 +233,33 @@ export default function ProjectModal({
           {/* TAB 3: SPECIFICATION TABLE */}
           {activeTab === "spec" && (
             <div className="space-y-6">
-              {/* Award Banner if any */}
-              {project.spec.awardOrStatus && (
-                <div className="flex items-center gap-2 p-4 bg-amber-500/10 border border-amber-500/30 text-amber-900 rounded-xs text-sm">
-                  <Award className="w-5 h-5 text-amber-700" />
-                  <span className="font-semibold">{project.spec.awardOrStatus}</span>
-                </div>
-              )}
-
               {/* SPEC TABLE A: Architectural Overview */}
               <div className="bg-white border border-neutral-200 rounded-xs overflow-hidden">
                 <div className="px-6 py-4 bg-neutral-900 text-white font-serif text-sm tracking-wide">
-                  A. 건축 개요 (Architectural Overview)
+                  A. 건축 개요 (Architectural Specification)
                 </div>
                 <table className="w-full text-xs text-left border-collapse">
                   <tbody className="divide-y divide-neutral-100">
                     <tr className="hover:bg-neutral-50">
                       <th className="py-3 px-6 font-medium text-neutral-500 bg-neutral-50/50 w-1/3">
-                        대지 위치 (Location)
+                        프로젝트명
+                      </th>
+                      <td className="py-3 px-6 text-neutral-900 font-medium">
+                        {project.titleKo} ({project.titleEn})
+                      </td>
+                    </tr>
+                    <tr className="hover:bg-neutral-50">
+                      <th className="py-3 px-6 font-medium text-neutral-500 bg-neutral-50/50">
+                        위치 (Location)
                       </th>
                       <td className="py-3 px-6 text-neutral-900">{project.spec.location}</td>
                     </tr>
                     <tr className="hover:bg-neutral-50">
                       <th className="py-3 px-6 font-medium text-neutral-500 bg-neutral-50/50">
-                        대지 면적 (Site Area)
+                        주용도 (Building Use)
                       </th>
-                      <td className="py-3 px-6 text-neutral-900 font-mono">
-                        {project.spec.siteArea}
-                      </td>
-                    </tr>
-                    <tr className="hover:bg-neutral-50">
-                      <th className="py-3 px-6 font-medium text-neutral-500 bg-neutral-50/50">
-                        건축 면적 (Building Area)
-                      </th>
-                      <td className="py-3 px-6 text-neutral-900 font-mono">
-                        {project.spec.buildingArea}
+                      <td className="py-3 px-6 text-neutral-900 font-medium text-amber-900">
+                        {project.spec.use}
                       </td>
                     </tr>
                     <tr className="hover:bg-neutral-50">
@@ -264,30 +272,18 @@ export default function ProjectModal({
                     </tr>
                     <tr className="hover:bg-neutral-50">
                       <th className="py-3 px-6 font-medium text-neutral-500 bg-neutral-50/50">
-                        건폐율 / 용적률 (FAR)
+                        규모 및 층수 (Scale)
                       </th>
                       <td className="py-3 px-6 text-neutral-900 font-mono">
-                        건폐율 {project.spec.coverageRatio} / 용적률 {project.spec.floorAreaRatio}
+                        {project.spec.scale}
                       </td>
                     </tr>
                     <tr className="hover:bg-neutral-50">
                       <th className="py-3 px-6 font-medium text-neutral-500 bg-neutral-50/50">
-                        건물 규모 (Scale)
+                        설계 연도 (Design Year)
                       </th>
-                      <td className="py-3 px-6 text-neutral-900">{project.spec.scale}</td>
-                    </tr>
-                    <tr className="hover:bg-neutral-50">
-                      <th className="py-3 px-6 font-medium text-neutral-500 bg-neutral-50/50">
-                        구조 공법 (Structure)
-                      </th>
-                      <td className="py-3 px-6 text-neutral-900">{project.spec.structure}</td>
-                    </tr>
-                    <tr className="hover:bg-neutral-50">
-                      <th className="py-3 px-6 font-medium text-neutral-500 bg-neutral-50/50">
-                        외벽 마감재 (Exterior Finish)
-                      </th>
-                      <td className="py-3 px-6 text-neutral-900">
-                        {project.spec.exteriorFinish}
+                      <td className="py-3 px-6 text-neutral-900 font-mono">
+                        {project.year}
                       </td>
                     </tr>
                   </tbody>
@@ -303,7 +299,7 @@ export default function ProjectModal({
                   <tbody className="divide-y divide-neutral-100">
                     <tr className="hover:bg-neutral-50">
                       <th className="py-3 px-6 font-medium text-neutral-500 bg-neutral-50/50 w-1/3">
-                        설계 총괄 (Principal)
+                        설계 총괄 (Principals)
                       </th>
                       <td className="py-3 px-6 text-neutral-900 font-medium">
                         {project.spec.principalArchitect}
@@ -311,9 +307,11 @@ export default function ProjectModal({
                     </tr>
                     <tr className="hover:bg-neutral-50">
                       <th className="py-3 px-6 font-medium text-neutral-500 bg-neutral-50/50">
-                        설계팀 (Design Team)
+                        설계사무소
                       </th>
-                      <td className="py-3 px-6 text-neutral-900">{project.spec.team}</td>
+                      <td className="py-3 px-6 text-neutral-900">
+                        노랑달건축사사무소 (NORANGDAL ARCHITECTS)
+                      </td>
                     </tr>
                     <tr className="hover:bg-neutral-50">
                       <th className="py-3 px-6 font-medium text-neutral-500 bg-neutral-50/50">
@@ -333,8 +331,8 @@ export default function ProjectModal({
         {/* Modal Bottom Action Bar */}
         <div className="px-6 py-4 bg-white border-t border-neutral-200 flex flex-col sm:flex-row sm:items-center justify-between gap-3 shrink-0">
           <div className="text-xs text-neutral-500">
-            <span className="font-medium text-neutral-900">노랑달 건축사사무소</span>와 이와
-            유사한 프로젝트 설계를 상담하시겠습니까?
+            <span className="font-medium text-neutral-900">노랑달건축사사무소</span>와 이와
+            유사한 건축 프로젝트 설계를 상담하시겠습니까?
           </div>
           <div className="flex items-center gap-2">
             <button

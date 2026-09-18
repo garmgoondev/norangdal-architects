@@ -10,7 +10,7 @@ export default function ConsultationSection() {
     name: "",
     phone: "",
     location: "",
-    program: "단독주택 (Residence)",
+    program: "단독주택 / 상가주택 (Residence / Commercial)",
     timeline: "6개월 이내 (Within 6 months)",
     notes: "",
   });
@@ -31,7 +31,7 @@ export default function ConsultationSection() {
           {/* Left Column: Studio Contact & Location (5 cols) */}
           <div className="lg:col-span-5 space-y-8">
             <div>
-              <span className="text-[11px] font-sans tracking-[0.25em] text-amber-800 uppercase block mb-2">
+              <span className="text-[11px] font-sans tracking-[0.25em] text-amber-800 uppercase block mb-2 font-semibold">
                 GET IN TOUCH
               </span>
               <h2 className="text-3xl sm:text-4xl font-serif font-light text-neutral-900 tracking-tight leading-tight">
@@ -39,7 +39,7 @@ export default function ConsultationSection() {
               </h2>
               <p className="mt-4 text-xs sm:text-sm text-neutral-600 font-light leading-relaxed">
                 설계에 대한 고민이 있으시다면 언제든 편안하게 문의해 주세요.
-                토지 지번을 알려주시면 건축 인허가 가능 여부와 대략적인 건축 규모를 대표 건축사가 직접 검토해 드립니다.
+                토지 지번을 알려주시면 건축 인허가 가능 여부와 대략적인 건축 규모를 15년 이상 경력의 대표 건축사가 직접 검토해 드립니다.
               </p>
             </div>
 
@@ -53,7 +53,7 @@ export default function ConsultationSection() {
                   <Phone className="w-4 h-4" />
                 </div>
                 <div>
-                  <div className="text-[10px] text-neutral-400 font-mono">대표 건축사 직통 전화</div>
+                  <div className="text-[10px] text-neutral-400 font-mono">대표 건축사 직통 번호</div>
                   <div className="text-sm font-serif font-medium text-neutral-900">
                     {STUDIO_INFO.mobile}
                   </div>
@@ -83,7 +83,7 @@ export default function ConsultationSection() {
                     {STUDIO_INFO.address}
                   </div>
                   <div className="text-[11px] text-neutral-500 mt-1">
-                    (지하철 3·8호선 가락시장역 / 송파대로 인접, 주차 가능)
+                    (방이동 송암빌딩 3층 / 올림픽공원 인접)
                   </div>
                 </div>
               </div>
@@ -101,8 +101,8 @@ export default function ConsultationSection() {
                   사전 검토 신청이 접수되었습니다
                 </h3>
                 <p className="text-xs sm:text-sm text-neutral-600 font-light max-w-md mx-auto leading-relaxed">
-                  남겨주신 대지 정보({formData.location})를 바탕으로 양인애 대표 건축사가
-                  토지이용계획 및 법적 용적률을 사전 검토한 후, <strong>24시간 이내에 직접 전화</strong>를 드리겠습니다.
+                  남겨주신 대지 정보({formData.location})를 바탕으로 이슬기 대표 건축사가
+                  토지이용계획 및 법적 용적률을 사전 검토한 후, <strong>직접 연락</strong>을 드리겠습니다.
                 </p>
                 <div className="pt-6">
                   <button
@@ -112,7 +112,7 @@ export default function ConsultationSection() {
                         name: "",
                         phone: "",
                         location: "",
-                        program: "단독주택 (Residence)",
+                        program: "단독주택 / 상가주택 (Residence / Commercial)",
                         timeline: "6개월 이내 (Within 6 months)",
                         notes: "",
                       });
@@ -174,7 +174,7 @@ export default function ConsultationSection() {
                   <input
                     type="text"
                     required
-                    placeholder="예: 서울특별시 송파구 방이동 00-0번지 (또는 경기 양평군 서종면)"
+                    placeholder="예: 서울특별시 송파구 방이동 00-0번지 (또는 경기도/지방 지번)"
                     value={formData.location}
                     onChange={(e) => setFormData({ ...formData, location: e.target.value })}
                     className="w-full px-3.5 py-2.5 text-xs bg-white border border-neutral-300 rounded-xs focus:outline-hidden focus:border-neutral-900"
@@ -192,12 +192,12 @@ export default function ConsultationSection() {
                       onChange={(e) => setFormData({ ...formData, program: e.target.value })}
                       className="w-full px-3.5 py-2.5 text-xs bg-white border border-neutral-300 rounded-xs focus:outline-hidden focus:border-neutral-900"
                     >
-                      <option>단독주택 (Residence)</option>
-                      <option>상가주택 (Commercial & Residential)</option>
+                      <option>단독주택 / 상가주택 (Residence / Commercial)</option>
                       <option>다가구 · 다세대주택 (Multi-Family / Multi-Unit)</option>
                       <option>주상복합 / 근린생활시설 (Mixed-Use & Commercial)</option>
+                      <option>공공건축물 / 현상설계 제안 (Public Architecture)</option>
                       <option>업무시설 / 오피스 사옥 (Office)</option>
-                      <option>대수선 · 리모델링 (Renovation)</option>
+                      <option>대수선 · 공간 환경개선 (Renovation)</option>
                       <option>토지 매입 전 사업성 검토 기획설계 (Feasibility)</option>
                     </select>
                   </div>
@@ -227,7 +227,7 @@ export default function ConsultationSection() {
                   </label>
                   <textarea
                     rows={3}
-                    placeholder="예상 공사 예산이나 특별히 선호하는 마감재, 가족 구성원 등을 자유롭게 적어주세요."
+                    placeholder="원하시는 공간 콘셉트나 특별히 고려해야 할 가족 구성원, 일정 등을 편안하게 적어주세요."
                     value={formData.notes}
                     onChange={(e) => setFormData({ ...formData, notes: e.target.value })}
                     className="w-full px-3.5 py-2.5 text-xs bg-white border border-neutral-300 rounded-xs focus:outline-hidden focus:border-neutral-900"

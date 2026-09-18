@@ -2,23 +2,28 @@ import type { Metadata } from "next";
 import "./globals.css";
 
 export const metadata: Metadata = {
-  title: "노랑달 건축사사무소 | NORANGDAL ARCHITECTS",
+  title: "노랑달건축사사무소 | NORANGDAL ARCHITECTS",
   description:
-    "단독주택, 다가구주택, 다세대, 상가주택, 주상복합, 근생 전문 서울 송파구 노랑달 건축사사무소. 사업성 검토 기획설계부터 건축 인허가, 감리, 준공까지 건축 전반 업무 수행. 대표 건축사 이슬기 (norangdal50@naver.com).",
+    "옐로우페이퍼 위에 소원을 그리는 남매 건축가(이슬기 대표, 이대호 이사). 안동 복합커뮤니티센터, 금곡동 공공도서관, 창업혁신 코워킹스페이스, 단독·상가주택 전문 서울 송파구 노랑달건축사사무소. 사업성 검토 기획설계부터 인허가, 감리, 준공까지 건축 전반 수행.",
   keywords: [
     "노랑달건축사사무소",
+    "노랑달건축",
     "이슬기건축사",
+    "이대호이사",
+    "안동복합커뮤니티센터",
+    "금곡동공공도서관",
+    "구덕민속예술관",
     "단독주택설계",
     "상가주택설계",
     "다가구주택설계",
     "주상복합설계",
     "송파구건축사",
-    "방이동건축사",
+    "방이동건축사사무소",
     "사업성검토기획설계",
     "건축인허가",
-    "건축공사감리",
+    "공사감리",
   ],
-  authors: [{ name: "노랑달 건축사사무소 (대표 이슬기)" }],
+  authors: [{ name: "노랑달건축사사무소 (대표 이슬기)" }],
   icons: {
     icon: [
       { url: "/icon.svg", type: "image/svg+xml" },
@@ -28,17 +33,17 @@ export const metadata: Metadata = {
     apple: "/icon.svg",
   },
   openGraph: {
-    title: "노랑달 건축사사무소 | NORANGDAL ARCHITECTS",
+    title: "노랑달건축사사무소 | NORANGDAL ARCHITECTS",
     description:
-      "도시의 결을 읽고, 빛과 온기를 채우는 건축. 서울 송파구 방이동 소재 건축사사무소.",
+      "옐로우페이퍼 위에 소원을 그리는 남매 건축가의 아틀리에. 안동 복합커뮤니티센터, 금곡동 공공도서관 등 9대 공식 프로젝트 아카이브.",
     url: "https://norangdal-architects.vercel.app",
-    siteName: "노랑달 건축사사무소",
+    siteName: "노랑달건축사사무소",
     images: [
       {
         url: "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?q=80&w=1600&auto=format&fit=crop",
         width: 1600,
         height: 1067,
-        alt: "노랑달 건축사사무소 대표작",
+        alt: "노랑달건축사사무소 프로젝트",
       },
     ],
     locale: "ko_KR",
