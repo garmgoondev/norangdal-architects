@@ -2,7 +2,7 @@
 
 import React, { useState } from "react";
 import { PROJECTS, Project } from "@/data/projects";
-import { Award, ArrowUpRight, Sparkles } from "lucide-react";
+import { ArrowUpRight, Sparkles } from "lucide-react";
 
 interface WorksSectionProps {
   onSelectProject: (project: Project) => void;
@@ -43,8 +43,8 @@ export default function WorksSection({ onSelectProject }: WorksSectionProps) {
               복합커뮤니티센터, 공공도서관, 코워킹스페이스부터 민속예술관과 환경개선까지
               사용자의 이야기를 바탕으로 구현된 노랑달건축사사무소의 9대 공식 설계 프로젝트입니다.
             </p>
-            <p className="text-[10px] font-mono text-amber-900/70 mt-1">
-              ※ 본 포트폴리오는 쇼룸 시안용 연출 이미지이며, 실제 설계안 데이터 및 건축가 의도문이 100% 동기화되어 있습니다.
+            <p className="text-[10px] font-mono text-amber-900/80 mt-1 font-medium">
+              ※ 노랑달건축사사무소 공식 홈페이지(norangdal.co.kr)에 등록된 실제 프로젝트 조감도 및 제원 데이터를 100% 반영하였습니다.
             </p>
           </div>
         </div>
@@ -74,8 +74,8 @@ export default function WorksSection({ onSelectProject }: WorksSectionProps) {
               onClick={() => onSelectProject(project)}
               className="group cursor-pointer flex flex-col bg-white border border-neutral-200/80 hover:border-neutral-900/40 transition-all duration-300 hover:shadow-lg"
             >
-              {/* Image Container */}
-              <div className="relative aspect-4/3 overflow-hidden bg-neutral-100">
+              {/* Image Container with Authentic Project Renders */}
+              <div className="relative aspect-4/3 overflow-hidden bg-neutral-900">
                 {/* eslint-disable-next-line @next/next/no-img-element */}
                 <img
                   src={project.thumbnail}
@@ -87,15 +87,15 @@ export default function WorksSection({ onSelectProject }: WorksSectionProps) {
 
                 {/* Status Badge */}
                 {project.spec.awardOrStatus && (
-                  <div className="absolute top-3 left-3 px-2.5 py-1 bg-neutral-900/80 backdrop-blur-xs text-amber-300 text-[10px] font-mono tracking-wider rounded-xs flex items-center gap-1 shadow-xs border border-white/10">
+                  <div className="absolute top-3 left-3 px-2.5 py-1 bg-neutral-900/85 backdrop-blur-xs text-amber-300 text-[10px] font-mono tracking-wider rounded-xs flex items-center gap-1 shadow-xs border border-white/10">
                     <Sparkles className="w-3 h-3 text-amber-400" />
                     <span>{project.spec.use}</span>
                   </div>
                 )}
 
-                {/* Conceptual Image Tag */}
-                <div className="absolute bottom-2 left-2 px-2 py-0.5 bg-neutral-950/70 backdrop-blur-xs text-white/80 text-[9px] font-mono tracking-wider rounded-xs pointer-events-none">
-                  시안용 연출 이미지
+                {/* Official Tag */}
+                <div className="absolute bottom-2 left-2 px-2 py-0.5 bg-neutral-950/80 backdrop-blur-xs text-white/90 text-[9px] font-mono tracking-wider rounded-xs pointer-events-none border border-white/10">
+                  공식 프로젝트 실적
                 </div>
 
                 {/* Quick Action Overlay Icon */}

@@ -23,7 +23,7 @@ export default function Hero({ onSelectProject }: HeroProps) {
 
   return (
     <section className="relative w-full h-[90vh] min-h-[580px] max-h-[960px] overflow-hidden bg-neutral-950 text-white select-none">
-      {/* Background Slides (100% Photographic Immersion) */}
+      {/* Background Slides (100% Photographic Immersion with Authentic Project Renders) */}
       {featured.map((p, idx) => (
         <div
           key={p.id}
@@ -39,7 +39,7 @@ export default function Hero({ onSelectProject }: HeroProps) {
             className="w-full h-full object-cover brightness-[0.95] hover:scale-101 transition-transform duration-1000"
           />
           {/* Minimal bottom shadow vignette only for subtle text readability */}
-          <div className="absolute inset-x-0 bottom-0 h-28 bg-gradient-to-t from-neutral-950/60 via-neutral-950/15 to-transparent pointer-events-none" />
+          <div className="absolute inset-x-0 bottom-0 h-28 bg-gradient-to-t from-neutral-950/70 via-neutral-950/20 to-transparent pointer-events-none" />
         </div>
       ))}
 
@@ -93,8 +93,8 @@ export default function Hero({ onSelectProject }: HeroProps) {
               →
             </span>
           </div>
-          <span className="text-[10px] text-white/50 font-mono tracking-wider mt-0.5">
-            시안용 연출 이미지 (실데이터 반영 가능)
+          <span className="text-[10px] text-amber-300/80 font-mono tracking-wider mt-0.5">
+            공식 프로젝트 실데이터
           </span>
         </button>
       </div>

@@ -71,7 +71,7 @@ export default function ProjectModal({
             }`}
           >
             <Layers className="w-3.5 h-3.5" />
-            <span>건축 투시도 및 시안 ({project.images.length})</span>
+            <span>건축 조감도 및 사진 ({project.images.length})</span>
           </button>
           <button
             onClick={() => setActiveTab("drawings")}
@@ -137,7 +137,7 @@ export default function ProjectModal({
 
                 <div className="absolute bottom-3 left-3 px-3 py-1 bg-neutral-950/80 backdrop-blur-xs text-white/90 text-[10px] font-sans rounded-xs flex items-center gap-1.5 border border-white/10">
                   <span className="w-1.5 h-1.5 rounded-full bg-amber-400" />
-                  <span>시안용 연출 이미지 (실데이터 반영 가능)</span>
+                  <span>노랑달 공식 프로젝트 실데이터</span>
                 </div>
 
                 <div className="absolute bottom-3 right-3 px-3 py-1 bg-neutral-950/70 text-white text-[11px] font-mono rounded-xs">

@@ -44,14 +44,12 @@ export const PROJECTS: Project[] = [
     categoryLabel: "공공업무시설",
     year: "2024",
     location: "경상북도 안동시 풍천면 갈전리 1181 외 3필지",
-    thumbnail: "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?q=80&w=1600&auto=format&fit=crop",
+    thumbnail: "/images/projects/andong_community_center.jpg",
     images: [
-      "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?q=80&w=1600&auto=format&fit=crop",
-      "https://images.unsplash.com/photo-1513694203232-719a280e022f?q=80&w=1600&auto=format&fit=crop",
-      "https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?q=80&w=1600&auto=format&fit=crop"
+      "/images/projects/andong_community_center.jpg"
     ],
-    isMockupImage: true,
-    imageNotice: "※ 시안용 연출 이미지 (실데이터 반영 가능)",
+    isMockupImage: false,
+    imageNotice: "노랑달 공식 프로젝트 실데이터",
     drawings: [
       {
         title: "배치 및 누하 진입 동선 개념도",
@@ -71,7 +69,7 @@ export const PROJECTS: Project[] = [
       scale: "지상 3층",
       principalArchitect: "이슬기 대표 건축사, 이대호 이사",
       team: "노랑달건축사사무소 설계팀",
-      awardOrStatus: "공식 프로젝트 아카이브"
+      awardOrStatus: "공식 프로젝트 실적"
     },
     conceptTitle: "햇살, 물, 바람이 함께하는 누하 진입 공간",
     summary: "검무산 자락을 따라 너른 평상을 들어 올려 만든 누하 공간이 주민들이 막힘없이 소통하는 열린 길이 되는 복합커뮤니티센터.",
@@ -88,14 +86,12 @@ export const PROJECTS: Project[] = [
     categoryLabel: "공공도서관 · 교육문화",
     year: "2024",
     location: "경기도 수원시 권선구 금곡동 1080번지",
-    thumbnail: "https://images.unsplash.com/photo-1521587760476-6c12a4b040da?q=80&w=1600&auto=format&fit=crop",
+    thumbnail: "/images/projects/geumgok_library.jpg",
     images: [
-      "https://images.unsplash.com/photo-1521587760476-6c12a4b040da?q=80&w=1600&auto=format&fit=crop",
-      "https://images.unsplash.com/photo-1507842229451-79731e712e4f?q=80&w=1600&auto=format&fit=crop",
-      "https://images.unsplash.com/photo-1568667256549-094345857637?q=80&w=1600&auto=format&fit=crop"
+      "/images/projects/geumgok_library.jpg"
     ],
-    isMockupImage: true,
-    imageNotice: "※ 시안용 연출 이미지 (실데이터 반영 가능)",
+    isMockupImage: false,
+    imageNotice: "노랑달 공식 프로젝트 실데이터",
     drawings: [
       {
         title: "공원-도서관 연계 지형 단면도",
@@ -110,7 +106,7 @@ export const PROJECTS: Project[] = [
       scale: "지상 2층",
       principalArchitect: "이슬기 대표 건축사, 이대호 이사",
       team: "노랑달건축사사무소 설계팀",
-      awardOrStatus: "공식 프로젝트 아카이브"
+      awardOrStatus: "공식 프로젝트 실적"
     },
     conceptTitle: "주민의 쉼터 위 지식을 쌓아 만든 책동산",
     summary: "공동주택과 초·중학교 인근 공원의 역할을 계승하며, 안전한 등하굣길과 탐험하는 독서 동산을 결합한 공공도서관.",
@@ -127,13 +123,12 @@ export const PROJECTS: Project[] = [
     categoryLabel: "업무시설 · 코워킹스페이스",
     year: "2024",
     location: "경기도 구리시",
-    thumbnail: "https://images.unsplash.com/photo-1497366216548-37526070297c?q=80&w=1600&auto=format&fit=crop",
+    thumbnail: "/images/projects/guri_startup_forest.jpg",
     images: [
-      "https://images.unsplash.com/photo-1497366216548-37526070297c?q=80&w=1600&auto=format&fit=crop",
-      "https://images.unsplash.com/photo-1497366811353-6870744d04b2?q=80&w=1600&auto=format&fit=crop"
+      "/images/projects/guri_startup_forest.jpg"
     ],
-    isMockupImage: true,
-    imageNotice: "※ 시안용 연출 이미지 (실데이터 반영 가능)",
+    isMockupImage: false,
+    imageNotice: "노랑달 공식 프로젝트 실데이터",
     drawings: [
       {
         title: "코워킹스페이스 공간 구획 다이어그램",
@@ -148,7 +143,7 @@ export const PROJECTS: Project[] = [
       scale: "지상 4층 (일부)",
       principalArchitect: "이슬기 대표 건축사, 이대호 이사",
       team: "노랑달건축사사무소 설계팀",
-      awardOrStatus: "공식 프로젝트 아카이브"
+      awardOrStatus: "공식 프로젝트 실적"
     },
     conceptTitle: "숲속의 오두막, Guri Forest",
     summary: "높은 층고와 광대한 면적을 활용하여 자연의 감각을 자극하고 창의적 몰입을 이끄는 혁신 코워킹 플랫폼.",
@@ -165,13 +160,12 @@ export const PROJECTS: Project[] = [
     categoryLabel: "업무시설 · 공간재생",
     year: "2024",
     location: "경기도 고양시",
-    thumbnail: "https://images.unsplash.com/photo-1497215728101-856f4ea42174?q=80&w=1600&auto=format&fit=crop",
+    thumbnail: "/images/projects/goyang_startup_coworking.jpg",
     images: [
-      "https://images.unsplash.com/photo-1497215728101-856f4ea42174?q=80&w=1600&auto=format&fit=crop",
-      "https://images.unsplash.com/photo-1498050108023-c5249f4df085?q=80&w=1600&auto=format&fit=crop"
+      "/images/projects/goyang_startup_coworking.jpg"
     ],
-    isMockupImage: true,
-    imageNotice: "※ 시안용 연출 이미지 (실데이터 반영 가능)",
+    isMockupImage: false,
+    imageNotice: "노랑달 공식 프로젝트 실데이터",
     drawings: [
       {
         title: "중정 채광 연계 평면 계획도",
@@ -186,7 +180,7 @@ export const PROJECTS: Project[] = [
       scale: "지상 5층 (일부)",
       principalArchitect: "이슬기 대표 건축사, 이대호 이사",
       team: "노랑달건축사사무소 설계팀",
-      awardOrStatus: "공식 프로젝트 아카이브"
+      awardOrStatus: "공식 프로젝트 실적"
     },
     conceptTitle: "창업의 시작! 활력의 공간 Goyang",
     summary: "노후화로 어둡고 침체된 업무시설에 자연 채광과 생동감 넘치는 색채를 불어넣은 스타트업 육성 공간.",
@@ -203,13 +197,12 @@ export const PROJECTS: Project[] = [
     categoryLabel: "체육시설 · 대공간건축",
     year: "2024",
     location: "경상북도 문경시 흥덕동 80-2번지 외 17필지",
-    thumbnail: "https://images.unsplash.com/photo-1545324418-cc1a3fa10c00?q=80&w=1600&auto=format&fit=crop",
+    thumbnail: "/images/projects/mungyeong_tennis_center.jpg",
     images: [
-      "https://images.unsplash.com/photo-1545324418-cc1a3fa10c00?q=80&w=1600&auto=format&fit=crop",
-      "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?q=80&w=1600&auto=format&fit=crop"
+      "/images/projects/mungyeong_tennis_center.jpg"
     ],
-    isMockupImage: true,
-    imageNotice: "※ 시안용 연출 이미지 (실데이터 반영 가능)",
+    isMockupImage: false,
+    imageNotice: "노랑달 공식 프로젝트 실데이터",
     drawings: [
       {
         title: "코트 배치 및 관람석 단면도",
@@ -224,7 +217,7 @@ export const PROJECTS: Project[] = [
       scale: "지상 1층 (대공간)",
       principalArchitect: "이슬기 대표 건축사, 이대호 이사",
       team: "노랑달건축사사무소 설계팀",
-      awardOrStatus: "공식 프로젝트 아카이브"
+      awardOrStatus: "공식 프로젝트 실적"
     },
     conceptTitle: "문희(聞喜)랑 경서(慶瑞)랑 놀재",
     summary: "비가 와도 눈이 와도 시민들이 함께 라켓을 맞대고 응원하며 기쁜 소식을 나누는 전천후 실내 스포츠 거점.",
@@ -241,13 +234,12 @@ export const PROJECTS: Project[] = [
     categoryLabel: "문화 및 집회시설",
     year: "2024",
     location: "부산광역시 서구 서대신동3가 산2-3 외 2필지",
-    thumbnail: "https://images.unsplash.com/photo-1518780664697-55e3ad937233?q=80&w=1600&auto=format&fit=crop",
+    thumbnail: "/images/projects/gudeok_art_museum.jpg",
     images: [
-      "https://images.unsplash.com/photo-1518780664697-55e3ad937233?q=80&w=1600&auto=format&fit=crop",
-      "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?q=80&w=1600&auto=format&fit=crop"
+      "/images/projects/gudeok_art_museum.jpg"
     ],
-    isMockupImage: true,
-    imageNotice: "※ 시안용 연출 이미지 (실데이터 반영 가능)",
+    isMockupImage: false,
+    imageNotice: "노랑달 공식 프로젝트 실데이터",
     drawings: [
       {
         title: "지형 순환 레벨 다이어그램",
@@ -262,7 +254,7 @@ export const PROJECTS: Project[] = [
       scale: "지하 1층 / 지상 3층",
       principalArchitect: "이슬기 대표 건축사, 이대호 이사",
       team: "노랑달건축사사무소 설계팀",
-      awardOrStatus: "공식 프로젝트 아카이브"
+      awardOrStatus: "공식 프로젝트 실적"
     },
     conceptTitle: "자연과 하나 된 구덕 민속예술관과 우연히 만나다",
     summary: "산책 중 우연히 들리는 마당극 가락처럼, 지형 레벨을 순환하며 일상 속에서 민속 예술을 향유하는 열린 문화 쉼터.",
@@ -279,13 +271,12 @@ export const PROJECTS: Project[] = [
     categoryLabel: "노유자시설 · 복지건축",
     year: "2023",
     location: "경기도 연천군 연천읍 옥산리 807-17번지 외 4필지",
-    thumbnail: "https://images.unsplash.com/photo-1577495508048-b635879837f1?q=80&w=1600&auto=format&fit=crop",
+    thumbnail: "/images/projects/yeoncheon_senior_center.jpg",
     images: [
-      "https://images.unsplash.com/photo-1577495508048-b635879837f1?q=80&w=1600&auto=format&fit=crop",
-      "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?q=80&w=1600&auto=format&fit=crop"
+      "/images/projects/yeoncheon_senior_center.jpg"
     ],
-    isMockupImage: true,
-    imageNotice: "※ 시안용 연출 이미지 (실데이터 반영 가능)",
+    isMockupImage: false,
+    imageNotice: "노랑달 공식 프로젝트 실데이터",
     drawings: [
       {
         title: "배치 및 소통마당 계획도",
@@ -300,7 +291,7 @@ export const PROJECTS: Project[] = [
       scale: "지상 2층",
       principalArchitect: "이슬기 대표 건축사, 이대호 이사",
       team: "노랑달건축사사무소 설계팀",
-      awardOrStatus: "공식 프로젝트 아카이브"
+      awardOrStatus: "공식 프로젝트 실적"
     },
     conceptTitle: "도시와 '공유'하고 주민과 '소통'하며 노인들을 '연결'하는 복지공간",
     summary: "남북 지형 축과 인근 복지관과의 연계를 극대화하고, 안전한 열린 마당으로 전 세대를 포용하는 따뜻한 복지 공간.",
@@ -317,13 +308,12 @@ export const PROJECTS: Project[] = [
     categoryLabel: "공공업무시설 · 공간환경개선",
     year: "2024",
     location: "경기도 수원시",
-    thumbnail: "https://images.unsplash.com/photo-1554118811-1e0d58224f24?q=80&w=1600&auto=format&fit=crop",
+    thumbnail: "/images/projects/daybreak_cafe_lobby.jpg",
     images: [
-      "https://images.unsplash.com/photo-1554118811-1e0d58224f24?q=80&w=1600&auto=format&fit=crop",
-      "https://images.unsplash.com/photo-1501339847302-ac426a4a7cbb?q=80&w=1600&auto=format&fit=crop"
+      "/images/projects/daybreak_cafe_lobby.jpg"
     ],
-    isMockupImage: true,
-    imageNotice: "※ 시안용 연출 이미지 (실데이터 반영 가능)",
+    isMockupImage: false,
+    imageNotice: "노랑달 공식 프로젝트 실데이터",
     drawings: [
       {
         title: "로비 환경개선 면적 구성도",
@@ -338,7 +328,7 @@ export const PROJECTS: Project[] = [
       scale: "지상 1층 (로비 일부)",
       principalArchitect: "이슬기 대표 건축사, 이대호 이사",
       team: "노랑달건축사사무소 설계팀",
-      awardOrStatus: "공식 프로젝트 아카이브"
+      awardOrStatus: "공식 프로젝트 실적"
     },
     conceptTitle: "일출을 맞이하며 하루의 시작을 알리는 'Daybreak Cafe'",
     summary: "노출 격자 구조로 다소 삭막했던 공공 로비에 일출의 온기와 휴게성을 더한 첫 번째 공간 환경개선 프로젝트.",
@@ -355,13 +345,12 @@ export const PROJECTS: Project[] = [
     categoryLabel: "부설주차장 · 도시인프라",
     year: "2024",
     location: "경기도 첨단도시계획시설 부지",
-    thumbnail: "https://images.unsplash.com/photo-1590674899484-d5640e854abe?q=80&w=1600&auto=format&fit=crop",
+    thumbnail: "/images/projects/parking_facility_expansion.jpg",
     images: [
-      "https://images.unsplash.com/photo-1590674899484-d5640e854abe?q=80&w=1600&auto=format&fit=crop",
-      "https://images.unsplash.com/photo-1506521781263-d8422e82f27a?q=80&w=1600&auto=format&fit=crop"
+      "/images/projects/parking_facility_expansion.jpg"
     ],
-    isMockupImage: true,
-    imageNotice: "※ 시안용 연출 이미지 (실데이터 반영 가능)",
+    isMockupImage: false,
+    imageNotice: "노랑달 공식 프로젝트 실데이터",
     drawings: [
       {
         title: "입면 루버 및 공원 연계 데크 개념도",
@@ -376,7 +365,7 @@ export const PROJECTS: Project[] = [
       scale: "지상 5층",
       principalArchitect: "이슬기 대표 건축사, 이대호 이사",
       team: "노랑달건축사사무소 설계팀",
-      awardOrStatus: "공식 프로젝트 아카이브"
+      awardOrStatus: "공식 프로젝트 실적"
     },
     conceptTitle: "기존 건축물과 조화되는 친환경 주차장",
     summary: "연구시설 단지의 주차난을 해소하고 인근 공원과 보행 동선을 연결하는 휴게 데크를 결합한 친환경 주차시설.",
@@ -410,7 +399,7 @@ export const STUDIO_INFO = {
     "단독주택 및 상가주택 등 소규모 건축물부터 공동주택 및 주상복합까지 건축물의 계획부터 인허가, 실시 및 감리 등 규모별·공정별 15년 이상의 실무경험을 바탕으로, 공공건축물 현상설계, 사전기획, 리모델링 등 다양한 형태의 건축 업무를 성실히 수행하고 있습니다."
   ],
 
-  // Two Principals
+  // Two Principals (Authentic Profile Photos)
   principals: [
     {
       nameKo: "이슬기",
@@ -418,9 +407,9 @@ export const STUDIO_INFO = {
       role: "대표 / 건축사 (Principal Architect)",
       education: "광운대학교 건축공학과 학사",
       license: "대한건축사협회 (KIRA) 정회원 · 공인건축사",
-      photo: "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?q=80&w=1200&auto=format&fit=crop",
-      isAuthenticPhoto: false,
-      photoNotice: "※ 대표 건축사 프로필 시안 컷 (실제 프로필 사진 교체 반영)",
+      photo: "/images/profile/lee_seulgi.jpg",
+      isAuthenticPhoto: true,
+      photoNotice: "노랑달건축사사무소 대표 건축사",
       affiliations: [
         "한국여성건축가협회 정회원",
         "양주시 공공건축가",
@@ -442,9 +431,9 @@ export const STUDIO_INFO = {
       role: "이사 / Director",
       education: "국립안동대학교 건축공학과 학사",
       license: "대한건축사협회 건설기술인",
-      photo: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?q=80&w=1200&auto=format&fit=crop",
-      isAuthenticPhoto: false,
-      photoNotice: "※ 이사 프로필 시안 컷 (실제 프로필 사진 교체 반영)",
+      photo: "/images/profile/lee_daeho.jpg",
+      isAuthenticPhoto: true,
+      photoNotice: "노랑달건축사사무소 이사 / Director",
       affiliations: [
         "대한건축사협회 건설기술인",
         "노랑달건축사사무소 기획·설계 총괄 이사"
